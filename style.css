@@ -24,6 +24,22 @@ header {
     border: 3px solid #333;
 }
 
+.social-icons {
+    margin-top: 15px;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 24px;
+    color: #333;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #007bff;
+}
+
 #projects {
     background: white;
     padding: 20px;
