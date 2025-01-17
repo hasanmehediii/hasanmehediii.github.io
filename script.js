@@ -4,6 +4,6 @@ document.addEventListener("DOMContentLoaded", function() {
     // Example: Add a new project dynamically
     let projectList = document.getElementById("project-list");
     let newProject = document.createElement("li");
-    newProject.innerHTML = '<a href="https://github.com/hasan-mehedii/my-new-project">My New Project</a>';
+    newProject.innerHTML = '<a href="https://github.com/hasan-mehedii">My New Project</a>';
     projectList.appendChild(newProject);
 });
