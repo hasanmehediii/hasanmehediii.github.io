@@ -8,6 +8,34 @@ body {
     text-align: center;
 }
 
+/* Navigation Bar */
+nav {
+    background-color: #333;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    color: #ff7e5f;
+}
+
 /* Header styles */
 header {
     background: linear-gradient(to right, #ff7e5f, #feb47b);
@@ -27,15 +55,14 @@ header p {
     font-size: 18px;
 }
 
-/* About section styles */
-#about {
+/* Home Section */
+#home {
     display: flex;
     margin: 30px;
     padding: 20px;
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    animation: fadeIn 2s ease-in-out;
 }
 
 .left-side {
@@ -45,15 +72,19 @@ header p {
 }
 
 .left-side img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    border-radius: 8px;
     border: 4px solid #333;
     transition: transform 0.3s ease;
 }
 
 .left-side img:hover {
     transform: scale(1.1);
+}
+
+.left-side h1, .left-side p {
+    margin: 10px 0;
 }
 
 .social-icons {
@@ -92,7 +123,32 @@ header p {
     color: #555;
 }
 
-/* Projects section styles */
+/* Education Section */
+#education {
+    padding: 30px;
+    margin: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#education h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#education ul {
+    list-style: none;
+    padding: 0;
+}
+
+#education ul li {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+/* Projects Section */
 #projects {
     background: white;
     padding: 30px;
