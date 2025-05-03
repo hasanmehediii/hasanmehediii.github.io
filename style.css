@@ -63,16 +63,20 @@ header p {
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
 }
 
 .left-side {
-    width: 30%;
+    width: 100%;
+    max-width: 250px;
     padding: 20px;
     text-align: center;
+    margin-bottom: 20px;
 }
 
 .left-side img {
-    width: 250px;
+    width: 100%;
+    max-width: 250px;
     height: 250px;
     border-radius: 8px;
     border: 4px solid #333;
@@ -106,7 +110,8 @@ header p {
 }
 
 .right-side {
-    width: 70%;
+    width: 100%;
+    max-width: 70%;
     padding: 20px;
     text-align: left;
     animation: fadeIn 2.5s ease-in-out;
@@ -123,82 +128,22 @@ header p {
     color: #555;
 }
 
-/* Education Section Styling */
-#education {
-    padding: 30px;
-    margin: 30px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
+/* Responsive Design */
+@media (max-width: 768px) {
+    #home {
+        flex-direction: column;
+        align-items: center;
+    }
 
-#education h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-    color: #333;
-}
+    .left-side {
+        width: 80%;
+        margin-bottom: 20px;
+    }
 
-.education-container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.education-item {
-    background-color: #f7f7f7;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.education-item h3 {
-    font-size: 24px;
-    margin: 0;
-    color: #333;
-}
-
-.education-item p {
-    font-size: 18px;
-    color: #555;
-    margin: 5px 0;
-}
-
-
-/* Projects Section */
-#projects {
-    background: white;
-    padding: 30px;
-    margin: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-#projects h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-ul li {
-    margin: 15px 0;
-}
-
-ul li a {
-    text-decoration: none;
-    color: #007bff;
-    font-size: 20px;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-ul li a:hover {
-    color: #ff7e5f;
-    text-decoration: underline;
+    .right-side {
+        width: 80%;
+        margin-top: 20px;
+    }
 }
 
 /* Keyframe animations */
