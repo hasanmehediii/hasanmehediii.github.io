@@ -29,6 +29,7 @@ header p {
 
 /* About section styles */
 #about {
+    display: flex;
     margin: 30px;
     padding: 20px;
     background-color: white;
@@ -37,7 +38,13 @@ header p {
     animation: fadeIn 2s ease-in-out;
 }
 
-#about img {
+.left-side {
+    width: 30%;
+    padding: 20px;
+    text-align: center;
+}
+
+.left-side img {
     width: 150px;
     height: 150px;
     border-radius: 50%;
@@ -45,22 +52,10 @@ header p {
     transition: transform 0.3s ease;
 }
 
-#about img:hover {
+.left-side img:hover {
     transform: scale(1.1);
 }
 
-#about h2 {
-    font-size: 24px;
-    margin-top: 20px;
-}
-
-#about p {
-    font-size: 18px;
-    margin-top: 10px;
-    color: #555;
-}
-
-/* Social media icons */
 .social-icons {
     margin-top: 15px;
 }
@@ -79,6 +74,24 @@ header p {
     transform: translateY(-5px);
 }
 
+.right-side {
+    width: 70%;
+    padding: 20px;
+    text-align: left;
+    animation: fadeIn 2.5s ease-in-out;
+}
+
+.right-side h2 {
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+.right-side p {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #555;
+}
+
 /* Projects section styles */
 #projects {
     background: white;
@@ -86,7 +99,6 @@ header p {
     margin: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    animation: fadeIn 2.5s ease-in-out;
 }
 
 #projects h2 {
