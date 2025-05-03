@@ -8,14 +8,22 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <header>
-        <h1>Mehedi Hasan</h1>
-        <p>Undergraduate CSE Student | Developer</p>
-    </header>
-    
-    <section id="about">
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#projects">Projects</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home">
         <div class="left-side">
             <img src="profile.jpg" alt="Profile Picture" class="fade-in">
+            <h1>Mehedi Hasan</h1>
+            <p>Undergraduate CSE Student | Developer</p>
+            <p>Email: mehedi-2022415897@cs.du.ac.bd</p>
             <div class="social-icons">
                 <a href="https://www.facebook.com/profile.php?id=100066649462473" target="_blank"><i class="fa-brands fa-facebook"></i></a>
                 <a href="https://github.com/hasan-mehedii" target="_blank"><i class="fa-brands fa-github"></i></a>
@@ -24,11 +32,12 @@
                 <a href="https://www.linkedin.com/in/mehedi-hasan-146a77307/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
             </div>
         </div>
+        
         <div class="right-side">
             <h2>About Me</h2>
             <p>Hello! I'm Mehedi Hasan, an undergraduate CSE student at the University of Dhaka. I love coding and working on different projects.</p>
 
-            <h2>My Projects</h2>
+            <h2>Projects</h2>
             <ul id="project-list">
                 <li><a href="https://github.com/hasan-mehedii/LibGDX">LibGDX Game Project</a></li>
                 <li><a href="https://github.com/hasan-mehedii/CSE-2112-Project">CSE-2112 Project</a></li>
@@ -37,7 +46,28 @@
             </ul>
         </div>
     </section>
-    
+
+    <!-- Education Section -->
+    <section id="education">
+        <h2>Education Background</h2>
+        <ul>
+            <li>BSc in CSE, University of Dhaka, XX, 2023 - till now</li>
+            <li>HSC, Tongi Govt College, 5.00, 2022</li>
+            <li>SSC, AKM School, 5.00, 2020</li>
+        </ul>
+    </section>
+
+    <!-- Projects Section (same as in Home) -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <ul id="project-list">
+            <li><a href="https://github.com/hasan-mehedii/LibGDX">LibGDX Game Project</a></li>
+            <li><a href="https://github.com/hasan-mehedii/CSE-2112-Project">CSE-2112 Project</a></li>
+            <li><a href="https://github.com/hasan-mehedii/CSE-1211-Project">CSE-1211 Project</a></li>
+            <li><a href="https://github.com/hasan-mehedii">More Projects</a></li>
+        </ul>
+    </section>
+
     <script src="script.js"></script>
 </body>
 </html>
