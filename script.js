@@ -6,4 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let newProject = document.createElement("li");
     newProject.innerHTML = '<a href="https://github.com/hasan-mehedii">My New Project</a>';
     projectList.appendChild(newProject);
+    
+    // Add animation when a project is added
+    newProject.classList.add('fade-in');
 });
