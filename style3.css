@@ -73,14 +73,25 @@ nav ul li a:hover {
     width: 250px;
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
+    position: relative; /* Ensure content stays on top */
+    background-size: cover; /* Ensure the image covers the entire card */
+    background-position: center; /* Center the background image */
+    height: 250px; /* Fixed height for the card */
 }
 
 .card a {
-    color: #333;
+    color: #fff; /* Change link text color to white */
     text-decoration: none;
     font-size: 18px;
     font-weight: bold;
     display: block;
+    position: absolute;
+    bottom: 20px; /* Position the link at the bottom */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.6); /* Background for readability */
+    padding: 10px;
+    border-radius: 5px;
     transition: color 0.3s;
 }
 
