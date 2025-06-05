@@ -1,45 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mehedi Hasan - Education</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mehedi Hasan - Education</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: url('background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+
+    nav {
+      position: absolute;
+      top: 20px;
+      right: 50px;
+      z-index: 10;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      font-size: 16px;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    section#education {
+      min-height: 100vh;
+      padding: 100px 50px 50px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      backdrop-filter: blur(6px);
+      background-color: rgba(0, 0, 0, 0.4); /* optional dark overlay */
+    }
+
+    section#education h2 {
+      font-size: 36px;
+      margin-bottom: 30px;
+      color: #ffffff;
+    }
+
+    .education-container {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      max-width: 800px;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 30px;
+      border-radius: 10px;
+      backdrop-filter: blur(4px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .education-item h3 {
+      font-size: 24px;
+      color: #66ccff;
+    }
+
+    .education-item p {
+      font-size: 16px;
+      color: #ffffff;
+      margin: 5px 0;
+    }
+
+    @media (max-width: 768px) {
+      section#education {
+        padding: 70px 20px 30px;
+      }
+
+      .education-container {
+        padding: 20px;
+      }
+
+      nav {
+        position: static;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.6);
+        padding: 10px 0;
+      }
+
+      nav ul {
+        justify-content: center;
+      }
+    }
+  </style>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="education.html">Education</a></li>
-            <li><a href="projects.html">Projects</a></li>
-        </ul>
-    </nav>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="education.html">Education</a></li>
+      <li><a href="projects.html">Projects</a></li>
+    </ul>
+  </nav>
 
-    <!-- Education Section (CV Style) -->
-    <section id="education">
-        <h2>Education Background</h2>
-        <div class="education-container">
-            <div class="education-item">
-                <h3>BSc in Computer Science and Engineering</h3>
-                <p>University of Dhaka, 2023 - Present</p>
-                <p><strong>CGPA:</strong> XX/4.00 </p>
-                <p><strong>Description:</strong> Currently pursuing a Bachelor's degree in CSE with a focus on software development and system design.</p>
-            </div>
+  <!-- Education Section (CV Style) -->
+  <section id="education">
+    <h2>Education Background</h2>
+    <div class="education-container">
+      <div class="education-item">
+        <h3>BSc in Computer Science and Engineering</h3>
+        <p>University of Dhaka, 2023 - Present</p>
+        <p><strong>CGPA:</strong> XX/4.00</p>
+        <p><strong>Description:</strong> Currently pursuing a Bachelor's degree in CSE with a focus on software development and system design.</p>
+      </div>
 
-            <div class="education-item">
-                <h3>Higher Secondary Certificate (HSC)</h3>
-                <p>Tongi Govt College, 2022</p>
-                <p><strong>Result:</strong> 5.00/5.00</p>
-            </div>
+      <div class="education-item">
+        <h3>Higher Secondary Certificate (HSC)</h3>
+        <p>Tongi Govt College, 2022</p>
+        <p><strong>Result:</strong> 5.00/5.00</p>
+      </div>
 
-            <div class="education-item">
-                <h3>Secondary School Certificate (SSC)</h3>
-                <p>AKM School, 2020</p>
-                <p><strong>Result:</strong> 5.00/5.00</p>
-            </div>
-        </div>
-    </section>
+      <div class="education-item">
+        <h3>Secondary School Certificate (SSC)</h3>
+        <p>AKM School, 2020</p>
+        <p><strong>Result:</strong> 5.00/5.00</p>
+      </div>
+    </div>
+  </section>
 
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
