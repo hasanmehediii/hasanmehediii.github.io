@@ -8,43 +8,51 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
   />
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="pt-16">
   <!-- Navigation Bar -->
-  <nav>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
+  <nav class="bg-gray-800 p-4 text-white fixed w-full z-10 top-0">
+    <ul class="flex justify-center space-x-8">
+      <li><a href="#hero" class="hover:text-purple-400 transition duration-300">Home</a></li>
+      <li><a href="#about" class="hover:text-purple-400 transition duration-300">About</a></li>
+      <li><a href="#education" class="hover:text-purple-400 transition duration-300">Education</a></li>
+      <li><a href="#skills" class="hover:text-purple-400 transition duration-300">Skills</a></li>
+      <li><a href="#projects" class="hover:text-purple-400 transition duration-300">Projects</a></li>
     </ul>
   </nav>
 
-  <!-- Home Section -->
-  <section id="home">
-    <div class="left-side">
-      <img src="profile.jpg" alt="Profile Picture" />
-      <h1>Mehedi Hasan</h1>
-      <p>Undergraduate CSE Student | Developer</p>
-      <p><a href="mailto:mehedi-2022415897@cs.du.ac.bd">mehedi-2022415897@cs.du.ac.bd</a></p>
-      <p><a href="resume.pdf" download="Mehedi_Hasan_CV.pdf">Download Resume</a></p>
-      <div class="social-icons">
-        <a href="https://www.facebook.com/profile.php?id=100066649462473" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-        <a href="https://github.com/hasan-mehedii" target="_blank"><i class="fa-brands fa-github"></i></a>
-        <a href="https://x.com/MehediHasa4780" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-        <a href="https://www.linkedin.com/in/mehedi-hasan-146a77307/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+  <!-- Hero Section -->
+  <section id="hero" class="relative flex flex-col items-center justify-center min-h-screen text-center text-white bg-cover bg-center" style="background-image: url('background.jpg'); background-attachment: fixed;">
+    <div class="absolute inset-0 bg-black opacity-70"></div>
+    <div class="smoke-container"></div>
+    <div class="relative p-6 max-w-4xl mx-auto">
+      <img src="profile.jpg" alt="Profile Picture" class="hero-profile-pic w-48 h-48 rounded-full border-4 border-purple-600 mx-auto mb-6 animate-fade-in-scale" />
+      <h1 class="text-6xl font-bold mb-4 animate-slide-up font-montserrat">Mehedi Hasan</h1>
+      <p class="text-3xl mb-6 animate-slide-up animate-delay-1 font-open-sans">Undergraduate CSE Student | Developer</p>
+      <p class="text-xl mb-8 animate-slide-up animate-delay-2 font-open-sans">Welcome to my portfolio!</p>
+      <a href="resume.pdf" download="Mehedi_Hasan_CV.pdf" class="hero-button inline-block bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-lg transition duration-300 animate-fade-in-scale animate-delay-3">Download Resume</a>
+      <div class="social-icons mt-10 animate-fade-in-scale animate-delay-4">
+        <a href="https://www.facebook.com/profile.php?id=100066649462473" target="_blank" class="text-white hover:text-purple-400 text-5xl mx-4 transition duration-300"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://github.com/hasan-mehedii" target="_blank" class="text-white hover:text-purple-400 text-5xl mx-4 transition duration-300"><i class="fa-brands fa-github"></i></a>
+        <a href="https://x.com/MehediHasa4780" target="_blank" class="text-white hover:text-purple-400 text-5xl mx-4 transition duration-300"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="https://www.linkedin.com/in/mehedi-hasan-146a77307/" target="_blank" class="text-white hover:text-purple-400 text-5xl mx-4 transition duration-300"><i class="fa-brands fa-linkedin"></i></a>
       </div>
     </div>
   </section>
 
   <!-- About Section -->
-  <section id="about">
-    <div class="container">
-      <h2>About Me</h2>
-      <img src="profile.jpg" alt="Mehedi Hasan" class="profile-pic">
-      <p>
+  <section id="about" class="animate-on-scroll py-20 bg-gray-900 text-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-5xl font-bold text-center mb-12 text-purple-400 font-montserrat">About Me</h2>
+      <img src="profile.jpg" alt="Mehedi Hasan" class="profile-pic w-40 h-40 rounded-full border-4 border-purple-600 mx-auto mb-8">
+      <p class="text-lg leading-relaxed max-w-3xl mx-auto font-open-sans">
         I am a passionate software engineer with a strong interest in web
         development, mobile applications, and game design. I am always eager
         to learn new technologies and apply them to create innovative and
@@ -54,109 +62,109 @@
   </section>
 
   <!-- Education Section (CV Style) -->
-  <section id="education">
-    <h2>Education Background</h2>
-    <div class="education-container">
-      <div class="education-item fade-in">
-        <h3>BSc in Computer Science and Engineering</h3>
-        <p>University of Dhaka, 2023 - Present</p>
-        <p><strong>CGPA:</strong> XX/4.00</p>
-        <p><strong>Description:</strong> Currently pursuing a Bachelor's degree in CSE with a focus on software development and system design.</p>
+  <section id="education" class="animate-on-scroll py-20 bg-gray-800 text-white">
+    <h2 class="text-5xl font-bold text-center mb-12 text-purple-400 font-montserrat">Education Background</h2>
+    <div class="education-container max-w-4xl mx-auto px-4 flex flex-col gap-8">
+      <div class="education-item bg-gray-700 p-8 rounded-lg shadow-lg text-left fade-in">
+        <h3 class="text-3xl font-semibold mb-2 text-purple-300 font-montserrat">BSc in Computer Science and Engineering</h3>
+        <p class="text-xl mb-1 font-open-sans">University of Dhaka, 2023 - Present</p>
+        <p class="text-lg mb-1 font-open-sans"><strong>CGPA:</strong> XX/4.00</p>
+        <p class="text-lg font-open-sans"><strong>Description:</strong> Currently pursuing a Bachelor's degree in CSE with a focus on software development and system design.</p>
       </div>
 
-      <div class="education-item fade-in">
-        <h3>Higher Secondary Certificate (HSC)</h3>
-        <p>Tongi Govt College, 2022</p>
-        <p><strong>Result:</strong> 5.00/5.00</p>
+      <div class="education-item bg-gray-700 p-8 rounded-lg shadow-lg text-left fade-in">
+        <h3 class="text-3xl font-semibold mb-2 text-purple-300 font-montserrat">Higher Secondary Certificate (HSC)</h3>
+        <p class="text-xl mb-1 font-open-sans">Tongi Govt College, 2022</p>
+        <p class="text-lg font-open-sans"><strong>Result:</strong> 5.00/5.00</p>
       </div>
 
-      <div class="education-item fade-in">
-        <h3>Secondary School Certificate (SSC)</h3>
-        <p>AKM School, 2020</p>
-        <p><strong>Result:</strong> 5.00/5.00</p>
+      <div class="education-item bg-gray-700 p-8 rounded-lg shadow-lg text-left fade-in">
+        <h3 class="text-3xl font-semibold mb-2 text-purple-300 font-montserrat">Secondary School Certificate (SSC)</h3>
+        <p class="text-xl mb-1 font-open-sans">AKM School, 2020</p>
+        <p class="text-lg font-open-sans"><strong>Result:</strong> 5.00/5.00</p>
       </div>
     </div>
   </section>
 
   <!-- Skills Section -->
-  <section id="skills">
-    <h2>Technical Skills</h2>
-    <div class="skills-container">
-      <div class="skill-category">
-        <h3>Programming Languages</h3>
+  <section id="skills" class="animate-on-scroll py-20 bg-gray-900 text-white">
+    <h2 class="text-5xl font-bold text-center mb-12 text-purple-400 font-montserrat">Technical Skills</h2>
+    <div class="skills-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto px-4">
+      <div class="skill-category bg-gray-800 p-8 rounded-lg shadow-lg">
+        <h3 class="text-3xl font-semibold mb-6 text-purple-300 font-montserrat">Programming Languages</h3>
         <ul>
-          <li>Java</li>
-          <li>Python</li>
-          <li>JavaScript</li>
-          <li>C++</li>
+          <li class="flex items-center mb-4 text-xl font-open-sans"><i class="fa-brands fa-java text-purple-400 text-4xl mr-4"></i> Java</li>
+          <li class="flex items-center mb-4 text-xl font-open-sans"><i class="fa-brands fa-python text-purple-400 text-4xl mr-4"></i> Python</li>
+          <li class="flex items-center mb-4 text-xl font-open-sans"><i class="fa-brands fa-js text-purple-400 text-4xl mr-4"></i> JavaScript</li>
+          <li class="flex items-center mb-4 text-xl font-open-sans"><i class="fa-solid fa-c text-purple-400 text-4xl mr-4"></i> C++</li>
         </ul>
       </div>
-      <div class="skill-category">
-        <h3>Web Technologies</h3>
+      <div class="skill-category bg-gray-800 p-8 rounded-lg shadow-lg">
+        <h3 class="text-3xl font-semibold mb-6 text-purple-300 font-montserrat">Web Technologies</h3>
         <ul>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>React</li>
-          <li>Node.js</li>
+          <li class="flex items-center mb-4 text-xl font-open-sans"><i class="fa-brands fa-html5 text-purple-400 text-4xl mr-4"></i> HTML</li>
+          <li class="flex items-center mb-4 text-xl font-open-sans"><i class="fa-brands fa-css3-alt text-purple-400 text-4xl mr-4"></i> CSS</li>
+          <li class="flex items-center mb-4 text-xl font-open-sans"><i class="fa-brands fa-react text-purple-400 text-4xl mr-4"></i> React</li>
+          <li class="flex items-center mb-4 text-xl font-open-sans"><i class="fa-brands fa-node-js text-purple-400 text-4xl mr-4"></i> Node.js</li>
         </ul>
       </div>
-      <div class="skill-category">
-        <h3>Databases</h3>
+      <div class="skill-category bg-gray-800 p-8 rounded-lg shadow-lg">
+        <h3 class="text-3xl font-semibold mb-6 text-purple-300 font-montserrat">Databases</h3>
         <ul>
-          <li>MySQL</li>
-          <li>MongoDB</li>
+          <li class="flex items-center mb-4 text-xl font-open-sans"><i class="fa-solid fa-database text-purple-400 text-4xl mr-4"></i> MySQL</li>
+          <li class="flex items-center mb-4 text-xl font-open-sans"><i class="fa-solid fa-database text-purple-400 text-4xl mr-4"></i> MongoDB</li>
         </ul>
       </div>
-      <div class="skill-category">
-        <h3>Tools & Platforms</h3>
+      <div class="skill-category bg-gray-800 p-8 rounded-lg shadow-lg">
+        <h3 class="text-3xl font-semibold mb-6 text-purple-300 font-montserrat">Tools & Platforms</h3>
         <ul>
-          <li>Git & GitHub</li>
-          <li>Docker</li>
-          <li>Android Studio</li>
+          <li class="flex items-center mb-4 text-xl font-open-sans"><i class="fa-brands fa-git-alt text-purple-400 text-4xl mr-4"></i> Git & <i class="fa-brands fa-github text-purple-400 text-4xl ml-2"></i> GitHub</li>
+          <li class="flex items-center mb-4 text-xl font-open-sans"><i class="fa-brands fa-docker text-purple-400 text-4xl mr-4"></i> Docker</li>
+          <li class="flex items-center mb-4 text-xl font-open-sans"><i class="fa-brands fa-android text-purple-400 text-4xl mr-4"></i> Android Studio</li>
         </ul>
       </div>
     </div>
   </section>
 
   <!-- Projects Section -->
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="project-cards">
-      <div class="card" style="background-image: url('images/1.png');">
-        <a href="https://github.com/hasan-mehedii/LibGDX">LibGDX Game Project</a>
+  <section id="projects" class="animate-on-scroll py-20 bg-gray-800 text-white">
+    <h2 class="text-5xl font-bold text-center mb-12 text-purple-400 font-montserrat">Projects</h2>
+    <div class="project-cards grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto px-4">
+      <div class="card bg-gray-700 rounded-lg shadow-lg overflow-hidden relative h-64 bg-cover bg-center" style="background-image: url('images/1.png');">
+        <a href="https://github.com/hasan-mehedii/LibGDX" class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-70 text-white text-2xl font-bold opacity-0 hover:opacity-100 transition-opacity duration-300">LibGDX Game Project</a>
       </div>
-      <div class="card" style="background-image: url('images/2.png');">
-        <a href="https://github.com/hasan-mehedii/CSE-2112-Project">CSE-2112 Project</a>
+      <div class="card bg-gray-700 rounded-lg shadow-lg overflow-hidden relative h-64 bg-cover bg-center" style="background-image: url('images/2.png');">
+        <a href="https://github.com/hasan-mehedii/CSE-2112-Project" class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-70 text-white text-2xl font-bold opacity-0 hover:opacity-100 transition-opacity duration-300">CSE-2112 Project</a>
       </div>
-      <div class="card" style="background-image: url('images/3.png');">
-        <a href="https://github.com/hasan-mehedii/CSE-1211-Project">CSE-1211 Project</a>
+      <div class="card bg-gray-700 rounded-lg shadow-lg overflow-hidden relative h-64 bg-cover bg-center" style="background-image: url('images/3.png');">
+        <a href="https://github.com/hasan-mehedii/CSE-1211-Project" class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-70 text-white text-2xl font-bold opacity-0 hover:opacity-100 transition-opacity duration-300">CSE-1211 Project</a>
       </div>
-      <div class="card" style="background-image: url('images/4.png');">
-        <a href="https://github.com/hasan-mehedii/Android_Project_WeatherApp">Android Project Weather App</a>
+      <div class="card bg-gray-700 rounded-lg shadow-lg overflow-hidden relative h-64 bg-cover bg-center" style="background-image: url('images/4.png');">
+        <a href="https://github.com/hasan-mehedii/Android_Project_WeatherApp" class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-70 text-white text-2xl font-bold opacity-0 hover:opacity-100 transition-opacity duration-300">Android Project Weather App</a>
       </div>
-      <div class="card" style="background-image: url('images/5.png');">
-        <a href="https://github.com/hasan-mehedii/Android_Project_NoteApp">Android Project Note App</a>
+      <div class="card bg-gray-700 rounded-lg shadow-lg overflow-hidden relative h-64 bg-cover bg-center" style="background-image: url('images/5.png');">
+        <a href="https://github.com/hasan-mehedii/Android_Project_NoteApp" class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-70 text-white text-2xl font-bold opacity-0 hover:opacity-100 transition-opacity duration-300">Android Project Note App</a>
       </div>
-      <div class="card" style="background-image: url('images/6.png');">
-        <a href="https://github.com/hasan-mehedii/Android_Project_Calculator">Android Project Calculator</a>
+      <div class="card bg-gray-700 rounded-lg shadow-lg overflow-hidden relative h-64 bg-cover bg-center" style="background-image: url('images/6.png');">
+        <a href="https://github.com/hasan-mehedii/Android_Project_Calculator" class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-70 text-white text-2xl font-bold opacity-0 hover:opacity-100 transition-opacity duration-300">Android Project Calculator</a>
       </div>
-      <div class="card" style="background-image: url('images/7.png');">
-        <a href="https://github.com/hasan-mehedii/Pygame_PlaneWar">Pygame Plane War</a>
+      <div class="card bg-gray-700 rounded-lg shadow-lg overflow-hidden relative h-64 bg-cover bg-center" style="background-image: url('images/7.png');">
+        <a href="https://github.com/hasan-mehedii/Pygame_PlaneWar" class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-70 text-white text-2xl font-bold opacity-0 hover:opacity-100 transition-opacity duration-300">Pygame Plane War</a>
       </div>
-      <div class="card" style="background-image: url('images/8.png');">
-        <a href="https://github.com/hasan-mehedii/Pygame_BoxingFight">Pygame Boxing Fight</a>
+      <div class="card bg-gray-700 rounded-lg shadow-lg overflow-hidden relative h-64 bg-cover bg-center" style="background-image: url('images/8.png');">
+        <a href="https://github.com/hasan-mehedii/Pygame_BoxingFight" class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-70 text-white text-2xl font-bold opacity-0 hover:opacity-100 transition-opacity duration-300">Pygame Boxing Fight</a>
       </div>
-      <div class="card" style="background-image: url('images/9.png');">
-        <a href="https://github.com/hasan-mehedii/JavaFX_Transaction">Banking System</a>
+      <div class="card bg-gray-700 rounded-lg shadow-lg overflow-hidden relative h-64 bg-cover bg-center" style="background-image: url('images/9.png');">
+        <a href="https://github.com/hasan-mehedii/JavaFX_Transaction" class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-70 text-white text-2xl font-bold opacity-0 hover:opacity-100 transition-opacity duration-300">Banking System</a>
       </div>
-      <div class="card" style="background-image: url('images/10.png');">
-        <a href="https://github.com/hasan-mehedii/Dino_Jumping">Dino Jumps</a>
+      <div class="card bg-gray-700 rounded-lg shadow-lg overflow-hidden relative h-64 bg-cover bg-center" style="background-image: url('images/10.png');">
+        <a href="https://github.com/hasan-mehedii/Dino_Jumping" class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-70 text-white text-2xl font-bold opacity-0 hover:opacity-100 transition-opacity duration-300">Dino Jumps</a>
       </div>
-      <div class="card" style="background-image: url('images/11.png');">
-        <a href="https://github.com/hasan-mehedii/Pygame_RatRunner">Pygame Rat Runner</a>
+      <div class="card bg-gray-700 rounded-lg shadow-lg overflow-hidden relative h-64 bg-cover bg-center" style="background-image: url('images/11.png');">
+        <a href="https://github.com/hasan-mehedii/Pygame_RatRunner" class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-70 text-white text-2xl font-bold opacity-0 hover:opacity-100 transition-opacity duration-300">Pygame Rat Runner</a>
       </div>
-      <div class="card fade-in" style="background-image: url('images/12.png');">
-        <a href="https://github.com/hasan-mehedii/JavaFX_VideoPlayer">JavaFX Video Player</a>
+      <div class="card bg-gray-700 rounded-lg shadow-lg overflow-hidden relative h-64 bg-cover bg-center" style="background-image: url('images/12.png');">
+        <a href="https://github.com/hasan-mehedii/JavaFX_VideoPlayer" class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-70 text-white text-2xl font-bold opacity-0 hover:opacity-100 transition-opacity duration-300">JavaFX Video Player</a>
       </div>
     </div>
   </section>
