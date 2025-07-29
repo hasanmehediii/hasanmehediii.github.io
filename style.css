@@ -46,6 +46,10 @@ nav ul {
     text-align: center;
 }
 
+nav {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
+}
+
 nav ul li {
     display: inline;
     margin-right: 20px;
@@ -95,7 +99,7 @@ nav a:hover {
 }
 
 #hero {
-    /* padding-top: calc(var(--navbar-height) + 16px); */ /* Removed to fix background image positioning */
+    padding-top: var(--navbar-height); /* Account for fixed navbar */
 }
 
 /* Smoke Effect */
@@ -114,36 +118,36 @@ nav a:hover {
 .smoke-container::after {
     content: '';
     position: absolute;
-    background: radial-gradient(ellipse at center, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+    background: radial-gradient(ellipse at center, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0) 70%); /* Reduced opacity */
     border-radius: 50%;
-    animation: smoke-drift 15s infinite ease-in-out alternate, smoke-fade 15s infinite ease-in-out;
+    animation: smoke-drift 20s infinite ease-in-out alternate, smoke-fade 20s infinite ease-in-out; /* Slower animation */
 }
 
 .smoke-container::before {
-    width: 300px;
-    height: 300px;
-    top: 10%;
-    left: 10%;
+    width: 200px; /* Smaller size */
+    height: 200px; /* Smaller size */
+    top: 15%;
+    left: 15%;
     animation-delay: 0s, 0s;
 }
 
 .smoke-container::after {
-    width: 400px;
-    height: 400px;
-    bottom: 5%;
-    right: 15%;
-    animation-delay: 7.5s, 7.5s; /* Stagger animation */
+    width: 250px; /* Smaller size */
+    height: 250px; /* Smaller size */
+    bottom: 10%;
+    right: 20%;
+    animation-delay: 10s, 10s; /* Stagger animation */
 }
 
 @keyframes smoke-drift {
     0% { transform: translate(0, 0) scale(1); } 
-    50% { transform: translate(50px, -50px) scale(1.1); }
+    50% { transform: translate(30px, -30px) scale(1.05); } /* Smaller movement */
     100% { transform: translate(0, 0) scale(1); }
 }
 
 @keyframes smoke-fade {
-    0%, 100% { opacity: 0.3; }
-    50% { opacity: 0.6; }
+    0%, 100% { opacity: 0.1; } /* More subtle fade */
+    50% { opacity: 0.2; }
 }
 
 /* Main content styles (adjusted for Tailwind) */
@@ -163,12 +167,28 @@ nav a:hover {
 }
 
 /* Education Section */
+.education-item {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    transition: all 0.3s ease-in-out;
+}
+.education-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
 .education-item h3 {
     color: #bb86fc;
     margin-top: 0;
 }
 
 /* Skills section styles */
+.skill-category {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    transition: all 0.3s ease-in-out;
+}
+.skill-category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
 .skill-category li {
     margin-bottom: 10px;
     font-size: 1.1em;
@@ -201,6 +221,10 @@ nav a:hover {
 }
 
 /* Projects Section */
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    transition: all 0.3s ease-in-out;
+}
 .card:hover {
     transform: translateY(-5px);
 }
