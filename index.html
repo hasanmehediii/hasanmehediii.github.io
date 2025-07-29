@@ -3,158 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mehedi Hasan - GitHub Profile</title>
+  <title>Mehedi Hasan - Portfolio</title>
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
   />
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: url('background.jpg') no-repeat center center fixed;
-      background-size: cover;
-      color: white;
-    }
-
-    nav {
-      position: absolute;
-      top: 20px;
-      right: 50px;
-      z-index: 10;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-    }
-
-    nav ul li a {
-      text-decoration: none;
-      color: white;
-      font-weight: 500;
-      font-size: 16px;
-    }
-
-    nav ul li a:hover {
-      text-decoration: underline;
-    }
-
-    #home {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-      height: 100vh;
-      padding: 60px 80px;
-      background-color: rgba(0, 0, 0, 0.4); /* light dark filter */
-    }
-
-    .left-side, .right-side {
-      background: none;
-      color: white;
-    }
-
-    .left-side {
-      max-width: 40%;
-    }
-
-    .left-side img {
-      width: 130px;
-      height: 130px;
-      border-radius: 50%;
-      margin-bottom: 20px;
-      object-fit: cover;
-      border: 2px solid #fff;
-    }
-
-    .left-side h1 {
-      font-size: 38px;
-      margin-bottom: 10px;
-    }
-
-    .left-side p {
-      margin: 5px 0;
-      font-size: 16px;
-    }
-
-    .left-side a {
-      color: #66ccff;
-      text-decoration: none;
-    }
-
-    .social-icons {
-      margin-top: 15px;
-    }
-
-    .social-icons a {
-      color: white;
-      font-size: 20px;
-      margin-right: 15px;
-      transition: color 0.3s ease;
-    }
-
-    .social-icons a:hover {
-      color: #66ccff;
-    }
-
-    .right-side {
-      max-width: 50%;
-    }
-
-    .right-side h2 {
-      font-size: 30px;
-      margin-bottom: 15px;
-    }
-
-    .right-side p {
-      font-size: 17px;
-      line-height: 1.6;
-    }
-
-    @media (max-width: 768px) {
-      #home {
-        flex-direction: column;
-        padding: 30px 20px;
-        height: auto;
-        text-align: center;
-      }
-
-      nav {
-        position: static;
-        text-align: center;
-        background: rgba(0, 0, 0, 0.5);
-        padding: 10px 0;
-      }
-
-      .left-side, .right-side {
-        max-width: 100%;
-        margin-bottom: 20px;
-      }
-
-      nav ul {
-        justify-content: center;
-      }
-
-      nav ul li a {
-        color: white;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <!-- Navigation Bar -->
   <nav>
     <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="education.html">Education</a></li>
-      <li><a href="projects.html">Projects</a></li>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
     </ul>
   </nav>
 
@@ -173,13 +37,130 @@
         <a href="https://www.linkedin.com/in/mehedi-hasan-146a77307/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
       </div>
     </div>
+  </section>
 
-    <div class="right-side">
+  <!-- About Section -->
+  <section id="about">
+    <div class="container">
       <h2>About Me</h2>
-      <p>Hello! I'm Mehedi Hasan, an undergraduate CSE student at the University of Dhaka. I love coding and working on different projects.
-      I am now working on cross-platform app development with Flutter and Python Web Application using Tkinter and MySQL.
-      Also, I have made projects on JavaFX, LibGDX, Pygame which are available on my GitHub profile.</p>
+      <img src="profile.jpg" alt="Mehedi Hasan" class="profile-pic">
+      <p>
+        I am a passionate software engineer with a strong interest in web
+        development, mobile applications, and game design. I am always eager
+        to learn new technologies and apply them to create innovative and
+        user-friendly solutions.
+      </p>
     </div>
   </section>
+
+  <!-- Education Section (CV Style) -->
+  <section id="education">
+    <h2>Education Background</h2>
+    <div class="education-container">
+      <div class="education-item fade-in">
+        <h3>BSc in Computer Science and Engineering</h3>
+        <p>University of Dhaka, 2023 - Present</p>
+        <p><strong>CGPA:</strong> XX/4.00</p>
+        <p><strong>Description:</strong> Currently pursuing a Bachelor's degree in CSE with a focus on software development and system design.</p>
+      </div>
+
+      <div class="education-item fade-in">
+        <h3>Higher Secondary Certificate (HSC)</h3>
+        <p>Tongi Govt College, 2022</p>
+        <p><strong>Result:</strong> 5.00/5.00</p>
+      </div>
+
+      <div class="education-item fade-in">
+        <h3>Secondary School Certificate (SSC)</h3>
+        <p>AKM School, 2020</p>
+        <p><strong>Result:</strong> 5.00/5.00</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <h2>Technical Skills</h2>
+    <div class="skills-container">
+      <div class="skill-category">
+        <h3>Programming Languages</h3>
+        <ul>
+          <li>Java</li>
+          <li>Python</li>
+          <li>JavaScript</li>
+          <li>C++</li>
+        </ul>
+      </div>
+      <div class="skill-category">
+        <h3>Web Technologies</h3>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>React</li>
+          <li>Node.js</li>
+        </ul>
+      </div>
+      <div class="skill-category">
+        <h3>Databases</h3>
+        <ul>
+          <li>MySQL</li>
+          <li>MongoDB</li>
+        </ul>
+      </div>
+      <div class="skill-category">
+        <h3>Tools & Platforms</h3>
+        <ul>
+          <li>Git & GitHub</li>
+          <li>Docker</li>
+          <li>Android Studio</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project-cards">
+      <div class="card" style="background-image: url('images/1.png');">
+        <a href="https://github.com/hasan-mehedii/LibGDX">LibGDX Game Project</a>
+      </div>
+      <div class="card" style="background-image: url('images/2.png');">
+        <a href="https://github.com/hasan-mehedii/CSE-2112-Project">CSE-2112 Project</a>
+      </div>
+      <div class="card" style="background-image: url('images/3.png');">
+        <a href="https://github.com/hasan-mehedii/CSE-1211-Project">CSE-1211 Project</a>
+      </div>
+      <div class="card" style="background-image: url('images/4.png');">
+        <a href="https://github.com/hasan-mehedii/Android_Project_WeatherApp">Android Project Weather App</a>
+      </div>
+      <div class="card" style="background-image: url('images/5.png');">
+        <a href="https://github.com/hasan-mehedii/Android_Project_NoteApp">Android Project Note App</a>
+      </div>
+      <div class="card" style="background-image: url('images/6.png');">
+        <a href="https://github.com/hasan-mehedii/Android_Project_Calculator">Android Project Calculator</a>
+      </div>
+      <div class="card" style="background-image: url('images/7.png');">
+        <a href="https://github.com/hasan-mehedii/Pygame_PlaneWar">Pygame Plane War</a>
+      </div>
+      <div class="card" style="background-image: url('images/8.png');">
+        <a href="https://github.com/hasan-mehedii/Pygame_BoxingFight">Pygame Boxing Fight</a>
+      </div>
+      <div class="card" style="background-image: url('images/9.png');">
+        <a href="https://github.com/hasan-mehedii/JavaFX_Transaction">Banking System</a>
+      </div>
+      <div class="card" style="background-image: url('images/10.png');">
+        <a href="https://github.com/hasan-mehedii/Dino_Jumping">Dino Jumps</a>
+      </div>
+      <div class="card" style="background-image: url('images/11.png');">
+        <a href="https://github.com/hasan-mehedii/Pygame_RatRunner">Pygame Rat Runner</a>
+      </div>
+      <div class="card fade-in" style="background-image: url('images/12.png');">
+        <a href="https://github.com/hasan-mehedii/JavaFX_VideoPlayer">JavaFX Video Player</a>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
 </body>
 </html>
