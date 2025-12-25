@@ -10,7 +10,7 @@ export interface Project {
   description: string;
   subDescription: string[];
   href: string;
-  liveUrl?: string;
+  liveLink?: string;
   logo: string;
   image: string;
   tags: Tag[];

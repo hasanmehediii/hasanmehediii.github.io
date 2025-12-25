@@ -12,7 +12,7 @@ const CodeRain: React.FC = () => {
 
     let width = canvas.width = window.innerWidth;
     let height = canvas.height = window.innerHeight;
-    
+
     // Snippets of "hacker" code
     const snippets = [
       "void hack(System s) { s.breach(); }",
@@ -46,13 +46,13 @@ const CodeRain: React.FC = () => {
 
     const animate = () => {
       ctx.clearRect(0, 0, width, height);
-      
+
       ctx.font = "16px 'JetBrains Mono'"; // Slightly larger font
-      
+
       particles.forEach(p => {
         ctx.fillStyle = `rgba(0, 255, 65, ${p.opacity})`;
         ctx.fillText(p.text, p.x, p.y);
-        
+
         p.y += p.speed;
         if (p.y > height) {
           p.y = -20;
@@ -84,8 +84,8 @@ const CodeRain: React.FC = () => {
 
 const Hero: React.FC = () => {
   const [text, setText] = useState('');
-  const fullText = "Aspiring Software Engineer | Full Stack Developer | Game Designer";
-  
+  const fullText = "Aspiring Software Engineer | Full Stack Developer | System Designer";
+
   useEffect(() => {
     let index = 0;
     const interval = setInterval(() => {
@@ -101,21 +101,21 @@ const Hero: React.FC = () => {
   return (
     // Increased pt-16 to pt-32 to create more space between navbar and content
     <section id="hero" className="relative min-h-screen flex items-center justify-center pt-32 pb-16 overflow-hidden bg-cyber-black">
-      
+
       {/* Background Code Animation */}
       <CodeRain />
-      
+
       {/* Radial Gradient Overlay to focus center */}
       <div className="absolute inset-0 bg-radial-gradient from-transparent via-cyber-black/50 to-cyber-black z-0 pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(5,5,5,0.1) 0%, rgba(5,5,5,0.9) 100%)' }} />
 
       <div className="container mx-auto px-6 relative z-10 text-center">
-        
+
         <div className="mb-10 relative inline-block group mt-8">
-           {/* Glitch Effect on Image Hover */}
-           <div className="absolute -inset-1 bg-gradient-to-r from-cyber-primary to-blue-600 rounded-full opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt blur-md"></div>
-           <img 
-            src="https://picsum.photos/seed/mehedi/300/300" 
-            alt="Mehedi Hasan" 
+          {/* Glitch Effect on Image Hover */}
+          <div className="absolute -inset-1 bg-gradient-to-r from-cyber-primary to-blue-600 rounded-full opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt blur-md"></div>
+          <img
+            src="assets/mehedi.jpg"
+            alt="Mehedi Hasan"
             className="relative w-40 h-40 md:w-52 md:h-52 rounded-full border-4 border-cyber-black object-cover mx-auto grayscale group-hover:grayscale-0 transition-all duration-500"
           />
           <div className="absolute -bottom-2 -right-2 bg-cyber-black border border-cyber-primary rounded-full p-2 text-cyber-primary animate-bounce">
@@ -126,7 +126,7 @@ const Hero: React.FC = () => {
         <p className="font-mono text-cyber-primary mb-4 tracking-widest text-sm md:text-base animate-pulse">
           &lt;Hello_World /&gt; I am
         </p>
-        
+
         <h1 className="text-4xl md:text-7xl font-bold text-white mb-6 font-tech tracking-tighter shadow-cyber-primary drop-shadow-[0_0_10px_rgba(0,255,65,0.5)]">
           MEHEDI HASAN
         </h1>
@@ -142,18 +142,18 @@ const Hero: React.FC = () => {
         </div>
 
         <div className="mt-8 flex flex-col md:flex-row items-center justify-center gap-6">
-          <a 
-            href="resume.pdf" 
-            download 
+          <a
+            href="resume.pdf"
+            download
             className="relative overflow-hidden px-8 py-3 bg-cyber-primary text-black font-bold font-mono rounded hover:bg-white transition-all duration-300 flex items-center gap-2 group shadow-[0_0_20px_rgba(0,255,65,0.4)]"
           >
             <span className="absolute top-0 left-0 w-full h-full bg-white/20 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 skew-x-12" />
             <Download className="w-4 h-4" />
             Download_CV.exe
           </a>
-          
-          <a 
-            href="#contact" 
+
+          <a
+            href="#contact"
             className="px-8 py-3 border border-cyber-primary text-cyber-primary font-mono rounded hover:bg-cyber-primary/10 hover:shadow-[0_0_15px_rgba(0,255,65,0.3)] transition-all duration-300 flex items-center gap-2"
           >
             Contact Me <ChevronRight className="w-4 h-4" />
@@ -167,10 +167,10 @@ const Hero: React.FC = () => {
             { Icon: Facebook, href: "https://www.facebook.com/profile.php?id=100066649462473" },
             { Icon: Twitter, href: "https://x.com/MehediHasa4780" }
           ].map((social, idx) => (
-            <a 
-              key={idx} 
-              href={social.href} 
-              target="_blank" 
+            <a
+              key={idx}
+              href={social.href}
+              target="_blank"
               rel="noreferrer"
               className="text-gray-400 hover:text-cyber-primary hover:scale-125 transition-all duration-300"
             >
@@ -180,7 +180,7 @@ const Hero: React.FC = () => {
         </div>
 
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce hidden md:block">
-           <span className="text-gray-500 font-mono text-xs tracking-[0.3em]">SCROLL_DOWN</span>
+          <span className="text-gray-500 font-mono text-xs tracking-[0.3em]">SCROLL_DOWN</span>
         </div>
       </div>
     </section>

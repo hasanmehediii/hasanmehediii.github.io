@@ -56,6 +56,7 @@ export const MY_PROJECTS: Project[] = [
       "Developed for learning language with interactive lessons and quizzes.",
     ],
     href: "https://www.github.com/hasanmehediii/CSE-2216-Project",
+    liveLink: "#",
     logo: "",
     image: "assets/projects/langapp.jpg",
     tags: [
@@ -72,6 +73,7 @@ export const MY_PROJECTS: Project[] = [
       "Developed a full-stack e-commerce web application using React for the frontend, Node.js and Express for the backend, and MongoDB for the database.",
     ],
     href: "https://www.github.com/hasanmehediii/CSE-2211-Project",
+    liveLink: "https://goribergari.vercel.app/",
     logo: "",
     image: "assets/projects/cardetail.png",
     tags: [
@@ -89,6 +91,7 @@ export const MY_PROJECTS: Project[] = [
       "Implemented features such as user authentication, account management, transaction processing, and fund transfers.",
     ],
     href: "https://www.github.com/hasanmehediii/LooterBank",
+    liveLink: "#",
     logo: "",
     image: "assets/projects/looter.png",
     tags: [
@@ -105,7 +108,8 @@ export const MY_PROJECTS: Project[] = [
     subDescription: [
       "Implemented features such as user authentication, real-time messaging, and video calls using the Stream API.",
     ],
-    href: "#",
+    href: "https://github.com/hasanmehediii/BokbokNet",
+    liveLink: "https://bokboknet.onrender.com",
     logo: "",
     image: "assets/projects/mernchat.png",
     tags: [
@@ -123,6 +127,7 @@ export const MY_PROJECTS: Project[] = [
       "Appointment with Dentist and 24/7 AI Agent Support with modern authentication system.",
     ],
     href: "#",
+    liveLink: "https://dentastic.vercel.app/",
     logo: "",
     image: "assets/projects/dentastic.png",
     tags: [
@@ -140,6 +145,7 @@ export const MY_PROJECTS: Project[] = [
       "Developed a real-time chatting, voice and video call using Firebase and ZEEGOCLOUD",
     ],
     href: "#",
+    liveLink: "#",
     logo: "",
     image: "assets/projects/chatapp.png",
     tags: [
@@ -156,6 +162,7 @@ export const MY_PROJECTS: Project[] = [
       "Featuring dynamic gameplay and engaging graphics.",
     ],
     href: "https://www.github.com/hasanmehediii/LibGDX",
+    liveLink: "#",
     logo: "",
     image: "assets/projects/1.png",
     tags: [
@@ -171,6 +178,7 @@ export const MY_PROJECTS: Project[] = [
       "OOP Course Project simulation.",
     ],
     href: "https://www.github.com/hasanmehediii/CSE-2112-Project",
+    liveLink: "#",
     logo: "",
     image: "assets/projects/2.png",
     tags: [
@@ -186,6 +194,7 @@ export const MY_PROJECTS: Project[] = [
       "Scoring system available to track players.",
     ],
     href: "https://github.com/hasanmehediii/CSE-1211-Project",
+    liveLink: "#",
     logo: "",
     image: "assets/projects/3.png",
     tags: [
@@ -201,6 +210,7 @@ export const MY_PROJECTS: Project[] = [
       "Built with Kotlin and WeatherAPI.",
     ],
     href: "https://github.com/hasanmehediii/Android_Project_WeatherApp",
+    liveLink: "#",
     logo: "",
     image: "assets/projects/4.png",
     tags: [
@@ -216,6 +226,7 @@ export const MY_PROJECTS: Project[] = [
       "Dynamic gameplay and engaging graphics.",
     ],
     href: "https://github.com/hasanmehediii/Pygame_BoxingFight",
+    liveLink: "#",
     logo: "",
     image: "assets/projects/8.png",
     tags: [
@@ -231,6 +242,7 @@ export const MY_PROJECTS: Project[] = [
       "Destroy enemies in this classic shooter.",
     ],
     href: "https://github.com/hasanmehediii/Pygame_PlaneWar",
+    liveLink: "#",
     logo: "",
     image: "assets/projects/7.png",
     tags: [
