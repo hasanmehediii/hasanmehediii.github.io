@@ -114,7 +114,7 @@ const Hero: React.FC = () => {
           {/* Glitch Effect on Image Hover */}
           <div className="absolute -inset-1 bg-gradient-to-r from-cyber-primary to-blue-600 rounded-full opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt blur-md"></div>
           <img
-            src="assets/mehedi.jpg"
+            src="/assets/mehedi.jpg"
             alt="Mehedi Hasan"
             className="relative w-40 h-40 md:w-52 md:h-52 rounded-full border-4 border-cyber-black object-cover mx-auto grayscale group-hover:grayscale-0 transition-all duration-500"
           />

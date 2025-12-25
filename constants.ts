@@ -58,7 +58,7 @@ export const MY_PROJECTS: Project[] = [
     href: "https://www.github.com/hasanmehediii/CSE-2216-Project",
     liveLink: "#",
     logo: "",
-    image: "assets/projects/langapp.jpg",
+    image: "/assets/projects/langapp.jpg",
     tags: [
       { id: 1, name: "Flutter" },
       { id: 2, name: "MongoDB" },
@@ -75,7 +75,7 @@ export const MY_PROJECTS: Project[] = [
     href: "https://www.github.com/hasanmehediii/CSE-2211-Project",
     liveLink: "https://goribergari.vercel.app/",
     logo: "",
-    image: "assets/projects/cardetail.png",
+    image: "/assets/projects/cardetail.png",
     tags: [
       { id: 1, name: "React" },
       { id: 2, name: "FastAPI" },
@@ -93,7 +93,7 @@ export const MY_PROJECTS: Project[] = [
     href: "https://www.github.com/hasanmehediii/LooterBank",
     liveLink: "#",
     logo: "",
-    image: "assets/projects/looter.png",
+    image: "/assets/projects/looter.png",
     tags: [
       { id: 1, name: "React" },
       { id: 2, name: "Node.js" },
@@ -111,7 +111,7 @@ export const MY_PROJECTS: Project[] = [
     href: "https://github.com/hasanmehediii/BokbokNet",
     liveLink: "https://bokboknet.onrender.com",
     logo: "",
-    image: "assets/projects/mernchat.png",
+    image: "/assets/projects/mernchat.png",
     tags: [
       { id: 1, name: "React" },
       { id: 2, name: "Node.js" },
@@ -129,7 +129,7 @@ export const MY_PROJECTS: Project[] = [
     href: "#",
     liveLink: "https://dentastic.vercel.app/",
     logo: "",
-    image: "assets/projects/dentastic.png",
+    image: "/assets/projects/dentastic.png",
     tags: [
       { id: 1, name: "NextJS" },
       { id: 2, name: "TypeScript" },
@@ -147,7 +147,7 @@ export const MY_PROJECTS: Project[] = [
     href: "#",
     liveLink: "#",
     logo: "",
-    image: "assets/projects/chatapp.png",
+    image: "/assets/projects/chatapp.png",
     tags: [
       { id: 1, name: "Flutter" },
       { id: 2, name: "Dart" },
@@ -164,7 +164,7 @@ export const MY_PROJECTS: Project[] = [
     href: "https://www.github.com/hasanmehediii/LibGDX",
     liveLink: "#",
     logo: "",
-    image: "assets/projects/1.png",
+    image: "/assets/projects/1.png",
     tags: [
       { id: 1, name: "Java" },
       { id: 2, name: "LibGDX" },
@@ -180,7 +180,7 @@ export const MY_PROJECTS: Project[] = [
     href: "https://www.github.com/hasanmehediii/CSE-2112-Project",
     liveLink: "#",
     logo: "",
-    image: "assets/projects/2.png",
+    image: "/assets/projects/2.png",
     tags: [
       { id: 1, name: "Java" },
       { id: 2, name: "JavaFX" },
@@ -196,7 +196,7 @@ export const MY_PROJECTS: Project[] = [
     href: "https://github.com/hasanmehediii/CSE-1211-Project",
     liveLink: "#",
     logo: "",
-    image: "assets/projects/3.png",
+    image: "/assets/projects/3.png",
     tags: [
       { id: 1, name: "C++" },
       { id: 2, name: "SDL2" },
@@ -212,7 +212,7 @@ export const MY_PROJECTS: Project[] = [
     href: "https://github.com/hasanmehediii/Android_Project_WeatherApp",
     liveLink: "#",
     logo: "",
-    image: "assets/projects/4.png",
+    image: "/assets/projects/4.png",
     tags: [
       { id: 1, name: "Kotlin" },
       { id: 2, name: "Android" },
@@ -228,7 +228,7 @@ export const MY_PROJECTS: Project[] = [
     href: "https://github.com/hasanmehediii/Pygame_BoxingFight",
     liveLink: "#",
     logo: "",
-    image: "assets/projects/8.png",
+    image: "/assets/projects/8.png",
     tags: [
       { id: 1, name: "Python" },
       { id: 2, name: "Pygame" },
@@ -244,7 +244,7 @@ export const MY_PROJECTS: Project[] = [
     href: "https://github.com/hasanmehediii/Pygame_PlaneWar",
     liveLink: "#",
     logo: "",
-    image: "assets/projects/7.png",
+    image: "/assets/projects/7.png",
     tags: [
       { id: 1, name: "Python" },
       { id: 2, name: "Pygame" },
