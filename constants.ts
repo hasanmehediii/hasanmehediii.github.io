@@ -1,16 +1,4 @@
 import { Project, EducationItem, SkillItem, NavLink } from './types';
-import { 
-  Code2, 
-  Database, 
-  Globe, 
-  Terminal, 
-  Cpu, 
-  Layout, 
-  Smartphone, 
-  Server,
-  GitBranch,
-  Coffee
-} from 'lucide-react';
 
 export const NAV_LINKS: NavLink[] = [
   { name: 'About', href: '#about' },
