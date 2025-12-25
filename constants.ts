@@ -57,7 +57,7 @@ export const MY_PROJECTS: Project[] = [
     ],
     href: "https://www.github.com/hasanmehediii/CSE-2216-Project",
     logo: "",
-    image: "https://picsum.photos/seed/langmaster/600/400",
+    image: "assets/projects/langapp.jpg",
     tags: [
       { id: 1, name: "Flutter" },
       { id: 2, name: "MongoDB" },
@@ -73,7 +73,7 @@ export const MY_PROJECTS: Project[] = [
     ],
     href: "https://www.github.com/hasanmehediii/CSE-2211-Project",
     logo: "",
-    image: "https://picsum.photos/seed/cars/600/400",
+    image: "assets/projects/cardetail.png",
     tags: [
       { id: 1, name: "React" },
       { id: 2, name: "FastAPI" },
@@ -90,7 +90,7 @@ export const MY_PROJECTS: Project[] = [
     ],
     href: "https://www.github.com/hasanmehediii/LooterBank",
     logo: "",
-    image: "https://picsum.photos/seed/bank/600/400",
+    image: "assets/projects/looter.png",
     tags: [
       { id: 1, name: "React" },
       { id: 2, name: "Node.js" },
@@ -107,7 +107,7 @@ export const MY_PROJECTS: Project[] = [
     ],
     href: "#",
     logo: "",
-    image: "https://picsum.photos/seed/chat/600/400",
+    image: "assets/projects/mernchat.png",
     tags: [
       { id: 1, name: "React" },
       { id: 2, name: "Node.js" },
@@ -124,7 +124,7 @@ export const MY_PROJECTS: Project[] = [
     ],
     href: "#",
     logo: "",
-    image: "https://picsum.photos/seed/dental/600/400",
+    image: "assets/projects/dentastic.png",
     tags: [
       { id: 1, name: "NextJS" },
       { id: 2, name: "TypeScript" },
@@ -141,7 +141,7 @@ export const MY_PROJECTS: Project[] = [
     ],
     href: "#",
     logo: "",
-    image: "https://picsum.photos/seed/mobilechat/600/400",
+    image: "assets/projects/chatapp.png",
     tags: [
       { id: 1, name: "Flutter" },
       { id: 2, name: "Dart" },
@@ -157,7 +157,7 @@ export const MY_PROJECTS: Project[] = [
     ],
     href: "https://www.github.com/hasanmehediii/LibGDX",
     logo: "",
-    image: "https://picsum.photos/seed/game1/600/400",
+    image: "assets/projects/1.png",
     tags: [
       { id: 1, name: "Java" },
       { id: 2, name: "LibGDX" },
@@ -172,7 +172,7 @@ export const MY_PROJECTS: Project[] = [
     ],
     href: "https://www.github.com/hasanmehediii/CSE-2112-Project",
     logo: "",
-    image: "https://picsum.photos/seed/movie/600/400",
+    image: "assets/projects/2.png",
     tags: [
       { id: 1, name: "Java" },
       { id: 2, name: "JavaFX" },
@@ -187,7 +187,7 @@ export const MY_PROJECTS: Project[] = [
     ],
     href: "https://github.com/hasanmehediii/CSE-1211-Project",
     logo: "",
-    image: "https://picsum.photos/seed/snake/600/400",
+    image: "assets/projects/3.png",
     tags: [
       { id: 1, name: "C++" },
       { id: 2, name: "SDL2" },
@@ -202,7 +202,7 @@ export const MY_PROJECTS: Project[] = [
     ],
     href: "https://github.com/hasanmehediii/Android_Project_WeatherApp",
     logo: "",
-    image: "https://picsum.photos/seed/weather/600/400",
+    image: "assets/projects/4.png",
     tags: [
       { id: 1, name: "Kotlin" },
       { id: 2, name: "Android" },
@@ -217,7 +217,7 @@ export const MY_PROJECTS: Project[] = [
     ],
     href: "https://github.com/hasanmehediii/Pygame_BoxingFight",
     logo: "",
-    image: "https://picsum.photos/seed/box/600/400",
+    image: "assets/projects/8.png",
     tags: [
       { id: 1, name: "Python" },
       { id: 2, name: "Pygame" },
@@ -232,7 +232,7 @@ export const MY_PROJECTS: Project[] = [
     ],
     href: "https://github.com/hasanmehediii/Pygame_PlaneWar",
     logo: "",
-    image: "https://picsum.photos/seed/plane/600/400",
+    image: "assets/projects/7.png",
     tags: [
       { id: 1, name: "Python" },
       { id: 2, name: "Pygame" },
