@@ -85,6 +85,23 @@ export const MY_PROJECTS: Project[] = [
   },
   {
     id: 3,
+    title: "Khaikhai",
+    description: "KhaiKhai is a smart meal planning platform designed for students and busy individuals to manage their daily food choices effectively.",
+    subDescription: [
+      "KhaiKhai is a smart meal planning platform designed to help students and busy individuals manage their daily food choices effectively. Its mainly a project for the Software Engineering Lab Course.",
+    ],
+    href: "https://www.github.com/hasanmehediii/CSE-3112-Project",
+    liveLink: "https://khaikhai.vercel.app",
+    logo: "",
+    image: "/assets/projects/khaikhai.png",
+    tags: [
+      { id: 1, name: "React" },
+      { id: 2, name: "FastAPI" },
+      { id: 3, name: "PostgreSQL" },
+    ],
+  },
+  {
+    id: 4,
     title: "LooterBank",
     description: "A secure and scalable banking application built with React, Node.js, Express, and MongoDB.",
     subDescription: [
@@ -102,7 +119,7 @@ export const MY_PROJECTS: Project[] = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     title: "BokbokNet",
     description: "A secure and scalable chatting and video calling application.",
     subDescription: [
@@ -120,7 +137,7 @@ export const MY_PROJECTS: Project[] = [
     ],
   },
   {
-    id: 5,
+    id: 6,
     title: "Dentastic",
     description: "A Dental Care Service Platform built with NextJS and PostgreSQL.",
     subDescription: [
@@ -138,7 +155,7 @@ export const MY_PROJECTS: Project[] = [
     ],
   },
   {
-    id: 6,
+    id: 7,
     title: "Chatting Application",
     description: "A secure and scalable chatting application built with Flutter and Firebase.",
     subDescription: [
@@ -155,7 +172,7 @@ export const MY_PROJECTS: Project[] = [
     ],
   },
   {
-    id: 7,
+    id: 8,
     title: "Car Fighting Game",
     description: "A 2D car fighting game developed using LibGDX and Java.",
     subDescription: [
@@ -171,7 +188,7 @@ export const MY_PROJECTS: Project[] = [
     ],
   },
   {
-    id: 8,
+    id: 9,
     title: "Movie Ticket System",
     description: "A desktop application for booking movie tickets, built with Java and JavaFX.",
     subDescription: [
@@ -187,7 +204,7 @@ export const MY_PROJECTS: Project[] = [
     ],
   },
   {
-    id: 9,
+    id: 10,
     title: "Snake: Desert King",
     description: "A classic snake game with a twist, developed using C++ and SDL2.",
     subDescription: [
@@ -200,54 +217,6 @@ export const MY_PROJECTS: Project[] = [
     tags: [
       { id: 1, name: "C++" },
       { id: 2, name: "SDL2" },
-    ],
-  },
-  {
-    id: 10,
-    title: "Weather App",
-    description: "An android mobile application for weather forecasting.",
-    subDescription: [
-      "Built with Kotlin and WeatherAPI.",
-    ],
-    href: "https://github.com/hasanmehediii/Android_Project_WeatherApp",
-    liveLink: "#",
-    logo: "",
-    image: "/assets/projects/4.png",
-    tags: [
-      { id: 1, name: "Kotlin" },
-      { id: 2, name: "Android" },
-    ],
-  },
-  {
-    id: 11,
-    title: "Pygame Boxing",
-    description: "A 2D boxing game developed using Pygame and Python.",
-    subDescription: [
-      "Dynamic gameplay and engaging graphics.",
-    ],
-    href: "https://github.com/hasanmehediii/Pygame_BoxingFight",
-    liveLink: "#",
-    logo: "",
-    image: "/assets/projects/8.png",
-    tags: [
-      { id: 1, name: "Python" },
-      { id: 2, name: "Pygame" },
-    ],
-  },
-  {
-    id: 12,
-    title: "Pygame PlaneWar",
-    description: "A 2D Plane fight game developed using Pygame and Python.",
-    subDescription: [
-      "Destroy enemies in this classic shooter.",
-    ],
-    href: "https://github.com/hasanmehediii/Pygame_PlaneWar",
-    liveLink: "#",
-    logo: "",
-    image: "/assets/projects/7.png",
-    tags: [
-      { id: 1, name: "Python" },
-      { id: 2, name: "Pygame" },
     ],
   }
 ];
