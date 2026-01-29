@@ -50,6 +50,23 @@ export const SKILLS: SkillItem[] = [
 export const MY_PROJECTS: Project[] = [
   {
     id: 1,
+    title: "CacheCaught",
+    description: "A simple smart proxy server with caching capabilities and a web dashboard to monitor the cache.",
+    subDescription: [
+      "Developed for Computer Networks Course Project.",
+    ],
+    href: "https://www.github.com/hasanmehediii/CSE-3111-Project",
+    liveLink: "#",
+    logo: "",
+    image: "/assets/projects/CacheCaught.png",
+    tags: [
+      { id: 1, name: "Python" },
+      { id: 2, name: "Flask" },
+      { id: 3, name: "Redis" },
+    ],
+  },
+  {
+    id: 2,
     title: "LangMastero",
     description: "A cross-platform mobile application for learning languages, built with Flutter, FastAPI, and MongoDB.",
     subDescription: [
@@ -58,7 +75,7 @@ export const MY_PROJECTS: Project[] = [
     href: "https://www.github.com/hasanmehediii/CSE-2216-Project",
     liveLink: "#",
     logo: "",
-    image: "/assets/projects/langapp.jpg",
+    image: "/assets/projects/LangMastero.png",
     tags: [
       { id: 1, name: "Flutter" },
       { id: 2, name: "MongoDB" },
@@ -66,7 +83,24 @@ export const MY_PROJECTS: Project[] = [
     ],
   },
   {
-    id: 2,
+    id: 3,
+    title: "Firefighter Robot Car",
+    description: "An autonomous fire-fighting robot car built with ESP32, featuring automatic flame detection, tracking, and extinguishing capabilities.",
+    subDescription: [
+      "This smart robot car mainly automatically finds and fights fires using flame sensors and a water pump system until it doesn't detect any fire around it.",
+    ],
+    href: "https://www.github.com/hasanmehediii/CSE-3116-Project",
+    liveLink: "https://github.com/hasanmehediii/CSE-3116-Project/blob/main/firefighter.gif",
+    logo: "",
+    image: "/assets/projects/Firefightercar.png",
+    tags: [
+      { id: 1, name: "ESP32 Microcontroller" },
+      { id: 2, name: "L298N Motor Driver" },
+      { id: 3, name: "Flame Sensor" },
+    ],
+  },
+  {
+    id: 4,
     title: "Goriber Gari",
     description: "A Full Stack E-commerce based web platform to purchase car and manage a brand shop.",
     subDescription: [
@@ -84,7 +118,7 @@ export const MY_PROJECTS: Project[] = [
     ],
   },
   {
-    id: 3,
+    id: 5,
     title: "Khaikhai",
     description: "KhaiKhai is a smart meal planning platform designed for students and busy individuals to manage their daily food choices effectively.",
     subDescription: [
@@ -101,7 +135,7 @@ export const MY_PROJECTS: Project[] = [
     ],
   },
   {
-    id: 4,
+    id: 6,
     title: "LooterBank",
     description: "A secure and scalable banking application built with React, Node.js, Express, and MongoDB.",
     subDescription: [
@@ -119,7 +153,7 @@ export const MY_PROJECTS: Project[] = [
     ],
   },
   {
-    id: 5,
+    id: 7,
     title: "BokbokNet",
     description: "A secure and scalable chatting and video calling application.",
     subDescription: [
@@ -137,7 +171,7 @@ export const MY_PROJECTS: Project[] = [
     ],
   },
   {
-    id: 6,
+    id: 8,
     title: "Dentastic",
     description: "A Dental Care Service Platform built with NextJS and PostgreSQL.",
     subDescription: [
@@ -155,7 +189,7 @@ export const MY_PROJECTS: Project[] = [
     ],
   },
   {
-    id: 7,
+    id: 9,
     title: "Chatting Application",
     description: "A secure and scalable chatting application built with Flutter and Firebase.",
     subDescription: [
@@ -172,7 +206,7 @@ export const MY_PROJECTS: Project[] = [
     ],
   },
   {
-    id: 8,
+    id: 10,
     title: "Car Fighting Game",
     description: "A 2D car fighting game developed using LibGDX and Java.",
     subDescription: [
@@ -188,7 +222,7 @@ export const MY_PROJECTS: Project[] = [
     ],
   },
   {
-    id: 9,
+    id: 11,
     title: "Movie Ticket System",
     description: "A desktop application for booking movie tickets, built with Java and JavaFX.",
     subDescription: [
@@ -204,7 +238,7 @@ export const MY_PROJECTS: Project[] = [
     ],
   },
   {
-    id: 10,
+    id: 12,
     title: "Snake: Desert King",
     description: "A classic snake game with a twist, developed using C++ and SDL2.",
     subDescription: [
