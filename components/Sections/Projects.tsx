@@ -5,7 +5,7 @@ import { Github, Code, Eye } from 'lucide-react';
 
 const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
   return (
-    <div className="group relative h-[480px] rounded-xl overflow-hidden bg-[#0a192f] border-2 border-cyber-primary/20 hover:border-cyber-primary transition-all duration-300 [transform-style:preserve-3d] hover:[transform:rotateY(10deg)_rotateX(5deg)]">
+    <div className="group relative h-[480px] rounded-xl overflow-hidden bg-[#0a192f] border-2 border-cyber-primary/20 hover:border-cyber-primary transition-all duration-300 [transform-style:preserve-3d]">
       
       {/* Scanline Overlay */}
       <div className="absolute inset-0 bg-repeat bg-center [background-image:repeating-linear-gradient(0deg,transparent,transparent_1px,rgba(0,255,65,0.1)_2px)] opacity-50 group-hover:opacity-100 transition-opacity duration-500 z-20 pointer-events-none animate-scanline" />
