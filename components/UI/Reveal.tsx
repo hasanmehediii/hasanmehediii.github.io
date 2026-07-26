@@ -6,33 +6,42 @@ interface RevealProps {
 }
 
 const Reveal: React.FC<RevealProps> = ({ children, width = "100%" }) => {
-  const ref = useRef(null);
+  const ref = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+    // Keep the content visible on browsers that do not support IntersectionObserver.
+    if (!("IntersectionObserver" in window)) {
+      setIsVisible(true);
+      return;
+    }
+
+    const element = ref.current;
+
+    if (!element) {
+      return;
+    }
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
-          // Optional: Stop observing once visible to only animate once
           observer.unobserve(entry.target);
         }
       },
       {
         root: null,
-        rootMargin: "0px 0px -50px 0px", // Trigger when element is slightly up in viewport
-        threshold: 0.15,
+        rootMargin: "0px 0px -50px 0px",
+        // A percentage-based threshold must stay small because sections such as
+        // Projects can be many viewports tall on phones and tablets.
+        threshold: 0.01,
       }
     );
 
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
+    observer.observe(element);
 
     return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current);
-      }
+      observer.unobserve(element);
       observer.disconnect();
     };
   }, []);
