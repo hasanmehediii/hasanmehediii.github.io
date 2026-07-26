@@ -1,171 +1,193 @@
 import React from 'react';
 import { MY_PROJECTS } from '../../constants';
 import { Project } from '../../types';
-import { Github, Code, Eye } from 'lucide-react';
+import {
+  ArrowUpRight,
+  Code2,
+  ExternalLink,
+  Github,
+  Radio,
+} from 'lucide-react';
 
-const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
+interface ProjectCardProps {
+  project: Project;
+  index: number;
+}
+
+const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
+  const hasLiveDemo = Boolean(project.liveLink && project.liveLink !== '#');
+  const projectNumber = String(index + 1).padStart(2, '0');
+
   return (
-    <div className="group relative h-[480px] rounded-xl overflow-hidden bg-[#0a192f] border-2 border-cyber-primary/20 hover:border-cyber-primary transition-all duration-300 [transform-style:preserve-3d]">
-      
-      {/* Scanline Overlay */}
-      <div className="absolute inset-0 bg-repeat bg-center [background-image:repeating-linear-gradient(0deg,transparent,transparent_1px,rgba(0,255,65,0.1)_2px)] opacity-50 group-hover:opacity-100 transition-opacity duration-500 z-20 pointer-events-none animate-scanline" />
+    <article className="project-card group/card relative flex h-full flex-col overflow-hidden rounded-2xl border border-white/10 bg-[#08110d] shadow-[0_24px_70px_rgba(0,0,0,0.3)] transition-all duration-500 hover:-translate-y-2 hover:border-cyber-primary/60 hover:shadow-[0_28px_80px_rgba(0,255,65,0.12)] focus-within:border-cyber-primary/70">
+      <span className="project-corner project-corner--top" aria-hidden="true" />
+      <span className="project-corner project-corner--bottom" aria-hidden="true" />
 
-      {/* Glitch and Image Container */}
-      <div className="relative h-[60%] w-full overflow-hidden">
-        <div className="absolute inset-0 bg-cyber-black/50 group-hover:bg-transparent transition-all duration-500 z-10" />
+      <div className="relative aspect-[16/10] overflow-hidden bg-[#020806]">
         <img
           src={project.image}
-          alt={project.title}
-          className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-out group-hover:opacity-75 group-hover:saturate-150"
+          alt={`${project.title} project preview`}
+          loading="lazy"
+          className="h-full w-full object-cover opacity-80 saturate-[0.8] transition-all duration-700 ease-out group-hover/card:scale-105 group-hover/card:opacity-100 group-hover/card:saturate-100"
         />
-        {/* Glitch Effect */}
-        <div className="absolute inset-0 w-full h-full bg-cover bg-center glitch-image" style={{ backgroundImage: `url(${project.image})` }} />
-        <div className="absolute inset-0 w-full h-full bg-cover bg-center glitch-image" style={{ backgroundImage: `url(${project.image})` }} />
-        <div className="absolute inset-0 w-full h-full bg-cover bg-center glitch-image" style={{ backgroundImage: `url(${project.image})` }} />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#08110d] via-transparent to-black/20" />
+        <div className="project-grid absolute inset-0 opacity-25 transition-opacity duration-500 group-hover/card:opacity-10" />
 
-        <div className="absolute bottom-3 left-3 z-20 flex flex-wrap gap-2">
-          {project.tags.slice(0, 3).map(tag => (
-            <span key={tag.id} className="text-xs font-mono bg-black/80 text-cyber-secondary px-3 py-1 rounded border border-cyber-secondary/30 backdrop-blur-sm">
-              {tag.name}
-            </span>
-          ))}
+        <div className="absolute left-4 top-4 flex items-center gap-2 rounded-full border border-white/10 bg-black/65 px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.18em] text-slate-300 backdrop-blur-md">
+          <Radio
+            size={11}
+            className={hasLiveDemo ? 'text-cyber-primary' : 'text-amber-400'}
+            aria-hidden="true"
+          />
+          {hasLiveDemo ? 'Live system' : 'Source build'}
         </div>
+
+        <span className="absolute right-4 top-3 font-tech text-4xl tracking-tighter text-white/20 transition-colors duration-300 group-hover/card:text-cyber-primary/40">
+          {projectNumber}
+        </span>
+
+        {project.logo && (
+          <div className="absolute bottom-4 left-4 flex h-11 w-11 items-center justify-center overflow-hidden rounded-xl border border-white/15 bg-black/70 p-1.5 shadow-lg backdrop-blur-md">
+            <img
+              src={project.logo}
+              alt=""
+              loading="lazy"
+              onError={(event) => {
+                event.currentTarget.parentElement?.classList.add('hidden');
+              }}
+              className="h-full w-full object-contain"
+            />
+          </div>
+        )}
       </div>
 
-      <div className="relative h-[40%] p-6 flex flex-col justify-between bg-[#0a192f] border-t-2 border-cyber-primary/20">
-        <div>
-          <h3 className="text-2xl font-bold text-slate-200 mb-2 font-tech group-hover:text-cyber-primary transition-colors duration-300">
-            {project.title}
-          </h3>
-          <p className="text-slate-400 text-sm line-clamp-3 leading-relaxed font-mono">
-            {project.description}
-          </p>
+      <div className="relative flex flex-1 flex-col p-5 sm:p-6">
+        <div className="mb-4 flex items-start justify-between gap-4">
+          <div>
+            <p className="mb-1 font-mono text-[10px] uppercase tracking-[0.24em] text-cyber-primary/70">
+              Project / {projectNumber}
+            </p>
+            <h3 className="font-tech text-2xl font-bold tracking-wide text-slate-100 transition-colors duration-300 group-hover/card:text-cyber-primary">
+              {project.title}
+            </h3>
+          </div>
+          <Code2
+            size={20}
+            className="mt-1 shrink-0 text-slate-600 transition-colors duration-300 group-hover/card:text-cyber-primary/70"
+            aria-hidden="true"
+          />
         </div>
 
-        <div className="flex gap-4 mt-4">
-          <a
-            href={project.liveLink || '#'}
-            target="_blank"
-            rel="noreferrer"
-            className="flex-1 flex items-center justify-center gap-2 py-2 rounded-md font-mono text-sm transition-all duration-300 border-2 border-cyber-primary/50 text-cyber-primary hover:bg-cyber-primary hover:text-black hover:shadow-[0_0_20px_#00ff41] font-bold"
-          >
-            <Eye size={16} />
-            Live Demo
-          </a>
+        <p className="mb-5 line-clamp-3 font-mono text-sm leading-6 text-slate-400">
+          {project.description}
+        </p>
+
+        <ul className="mb-6 flex flex-wrap gap-2" aria-label={`${project.title} technologies`}>
+          {project.tags.map((tag) => (
+            <li
+              key={tag.id}
+              className="rounded-md border border-cyber-primary/15 bg-cyber-primary/[0.05] px-2.5 py-1 font-mono text-[11px] text-slate-300 transition-colors duration-300 group-hover/card:border-cyber-primary/30 group-hover/card:text-cyber-primary"
+            >
+              {tag.name}
+            </li>
+          ))}
+        </ul>
+
+        <div className="mt-auto flex items-center gap-3 border-t border-white/[0.07] pt-5">
+          {hasLiveDemo ? (
+            <a
+              href={project.liveLink}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={`Open live demo for ${project.title}`}
+              className="project-action project-action--primary"
+            >
+              <ExternalLink size={15} aria-hidden="true" />
+              Live demo
+            </a>
+          ) : (
+            <span
+              className="project-action cursor-not-allowed border-white/10 text-slate-600"
+              aria-label={`No live demo available for ${project.title}`}
+              title="Live demo not available"
+            >
+              <ExternalLink size={15} aria-hidden="true" />
+              No demo
+            </span>
+          )}
+
           <a
             href={project.href}
             target="_blank"
             rel="noreferrer"
-            className="flex-1 flex items-center justify-center gap-2 py-2 rounded-md border-2 border-slate-600 text-slate-400 font-mono text-sm hover:border-slate-400 hover:text-white transition-all duration-300"
+            aria-label={`View ${project.title} source code on GitHub`}
+            className="project-action border-white/10 text-slate-300 hover:border-white/25 hover:bg-white/[0.06] hover:text-white"
           >
-            <Github size={16} />
+            <Github size={15} aria-hidden="true" />
             Source
           </a>
         </div>
       </div>
-    </div>
+    </article>
   );
 };
 
 const Projects: React.FC = () => {
   return (
-    <>
-      <style>{`
-        @keyframes scanline {
-          0% { transform: translateY(0); }
-          100% { transform: translateY(100%); }
-        }
-        .animate-scanline {
-          animation: scanline 10s linear infinite;
-        }
+    <section id="projects" className="relative overflow-hidden bg-cyber-black py-24">
+      <div className="pointer-events-none absolute left-1/2 top-28 h-72 w-72 -translate-x-1/2 rounded-full bg-cyber-primary/[0.07] blur-[120px]" />
+      <div className="pointer-events-none absolute inset-0 project-section-grid opacity-30" />
 
-        .glitch-image {
-          display: none;
-        }
-
-        .group:hover .glitch-image {
-          display: block;
-          animation: glitch 1.5s infinite;
-        }
-
-        .group:hover .glitch-image:nth-of-type(1) {
-          animation-delay: 0.1s;
-          opacity: 0.5;
-        }
-
-        .group:hover .glitch-image:nth-of-type(2) {
-          animation-delay: 0.2s;
-          opacity: 0.5;
-        }
-        
-        .group:hover .glitch-image:nth-of-type(3) {
-          animation-delay: 0.3s;
-          opacity: 0.5;
-        }
-
-        @keyframes glitch {
-          0% {
-            clip-path: inset(10% 0 80% 0);
-            transform: translate(-10px, -5px);
-          }
-          10% {
-            clip-path: inset(90% 0 5% 0);
-            transform: translate(10px, 5px);
-          }
-          30% {
-            clip-path: inset(40% 0 40% 0);
-            transform: translate(-5px, 0px);
-          }
-          50% {
-            clip-path: inset(70% 0 10% 0);
-            transform: translate(5px, -5px);
-          }
-          70% {
-            clip-path: inset(20% 0 70% 0);
-            transform: translate(-10px, 5px);
-          }
-          90% {
-            clip-path: inset(50% 0 30% 0);
-            transform: translate(10px, -5px);
-          }
-          100% {
-            clip-path: inset(10% 0 80% 0);
-            transform: translate(-10px, -5px);
-          }
-        }
-      `}</style>
-      <section id="projects" className="py-24 bg-cyber-black relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-1/2 h-full bg-cyber-primary/5 -skew-x-12 blur-3xl -z-10 pointer-events-none" />
-
-        <div className="container mx-auto px-6">
-          <div className="flex flex-col items-center mb-16">
-            <span className="text-cyber-primary font-mono text-xl mb-2">04. Work</span>
-            <h2 className="text-4xl md:text-5xl font-bold text-white font-tech tracking-wider">
-              PROJECT_ARCHIVE
+      <div className="container relative mx-auto px-6">
+        <div className="mb-14 flex flex-col gap-7 md:flex-row md:items-end md:justify-between">
+          <div>
+            <span className="mb-3 block font-mono text-sm uppercase tracking-[0.3em] text-cyber-primary">
+              04. Work
+            </span>
+            <h2 className="font-tech text-4xl font-bold tracking-wider text-white md:text-5xl">
+              PROJECT_<span className="text-cyber-primary">ARCHIVE</span>
             </h2>
-            <div className="w-24 h-1 bg-cyber-primary mt-4 shadow-[0_0_10px_#00ff41]" />
+            <p className="mt-4 max-w-xl font-mono text-sm leading-6 text-slate-400">
+              A selection of products, experiments, and course projects built to
+              solve practical problems.
+            </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 perspective-1000">
-            {MY_PROJECTS.map((project) => (
-              <ProjectCard key={project.id} project={project} />
-            ))}
-          </div>
-
-          <div className="mt-20 text-center">
-            <a
-              href="https://github.com/hasanmehediii"
-              target="_blank"
-              rel="noreferrer"
-              className="group inline-flex items-center gap-3 px-8 py-4 border-2 border-cyber-primary text-cyber-primary font-mono text-lg rounded hover:bg-cyber-primary hover:text-black transition-all duration-300 shadow-[0_0_15px_rgba(0,255,65,0.2)] hover:shadow-[0_0_35px_rgba(0,255,65,0.6)]"
-            >
-              <Code size={20} className="group-hover:animate-[spin_2s_linear_infinite]" />
-              View_More_On_GitHub
-            </a>
+          <div className="flex w-fit items-center gap-3 rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 font-mono backdrop-blur-sm">
+            <span className="text-2xl font-bold text-cyber-primary">
+              {String(MY_PROJECTS.length).padStart(2, '0')}
+            </span>
+            <span className="text-[10px] uppercase leading-4 tracking-[0.2em] text-slate-500">
+              Projects
+              <br />
+              indexed
+            </span>
           </div>
         </div>
-      </section>
-    </>
+
+        <div className="grid grid-cols-1 gap-7 md:grid-cols-2 xl:grid-cols-3">
+          {MY_PROJECTS.map((project, index) => (
+            <ProjectCard key={project.id} project={project} index={index} />
+          ))}
+        </div>
+
+        <div className="mt-16 flex justify-center">
+          <a
+            href="https://github.com/hasanmehediii"
+            target="_blank"
+            rel="noreferrer"
+            className="group inline-flex items-center gap-3 rounded-lg border border-cyber-primary/50 bg-cyber-primary/[0.06] px-6 py-3.5 font-mono text-sm font-bold text-cyber-primary transition-all duration-300 hover:border-cyber-primary hover:bg-cyber-primary hover:text-black hover:shadow-[0_0_30px_rgba(0,255,65,0.28)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyber-primary focus-visible:ring-offset-4 focus-visible:ring-offset-cyber-black"
+          >
+            Explore all repositories
+            <ArrowUpRight
+              size={18}
+              className="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+              aria-hidden="true"
+            />
+          </a>
+        </div>
+      </div>
+    </section>
   );
 };
 

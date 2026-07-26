@@ -26,8 +26,8 @@ export interface EducationItem {
 
 export interface SkillItem {
   name: string;
-  icon: string; // Using string to represent icon name or path
-  category: 'language' | 'frontend' | 'backend' | 'tool';
+  icon?: string;
+  category: 'language' | 'frontend' | 'mobile' | 'backend' | 'database' | 'tool';
 }
 
 export interface NavLink {

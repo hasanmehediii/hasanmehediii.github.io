@@ -24,3 +24,169 @@ body {
   .perspective-1000 {
     perspective: 1000px;
   }
+
+  .project-card::after {
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: linear-gradient(
+      115deg,
+      transparent 20%,
+      rgba(0, 255, 65, 0.045) 48%,
+      transparent 72%
+    );
+    content: "";
+    pointer-events: none;
+    transform: translateX(-100%);
+    transition: transform 700ms ease;
+  }
+
+  .project-card:hover::after,
+  .project-card:focus-within::after {
+    transform: translateX(100%);
+  }
+
+  .project-grid {
+    background-image:
+      linear-gradient(rgba(0, 255, 65, 0.18) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 255, 65, 0.18) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+
+  .project-section-grid {
+    background-image:
+      linear-gradient(rgba(0, 255, 65, 0.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 255, 65, 0.025) 1px, transparent 1px);
+    background-size: 56px 56px;
+    -webkit-mask-image: linear-gradient(to bottom, black, transparent 85%);
+    mask-image: linear-gradient(to bottom, black, transparent 85%);
+  }
+
+  .project-corner {
+    position: absolute;
+    z-index: 30;
+    width: 22px;
+    height: 22px;
+    pointer-events: none;
+    transition: width 300ms ease, height 300ms ease;
+  }
+
+  .project-corner--top {
+    top: 9px;
+    right: 9px;
+    border-top: 1px solid rgba(0, 255, 65, 0.65);
+    border-right: 1px solid rgba(0, 255, 65, 0.65);
+  }
+
+  .project-corner--bottom {
+    bottom: 9px;
+    left: 9px;
+    border-bottom: 1px solid rgba(0, 255, 65, 0.65);
+    border-left: 1px solid rgba(0, 255, 65, 0.65);
+  }
+
+  .project-card:hover .project-corner,
+  .project-card:focus-within .project-corner {
+    width: 34px;
+    height: 34px;
+  }
+
+  .project-action {
+    display: inline-flex;
+    flex: 1 1 0%;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-height: 40px;
+    border-width: 1px;
+    border-radius: 0.5rem;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.75rem;
+    font-weight: 700;
+    transition: color 300ms ease, border-color 300ms ease,
+      background-color 300ms ease, box-shadow 300ms ease;
+  }
+
+  .project-action--primary {
+    border-color: rgba(0, 255, 65, 0.35);
+    background-color: rgba(0, 255, 65, 0.06);
+    color: #00ff41;
+  }
+
+  .project-action--primary:hover {
+    border-color: #00ff41;
+    background-color: #00ff41;
+    color: #000;
+    box-shadow: 0 0 22px rgba(0, 255, 65, 0.2);
+  }
+
+  .project-action:focus-visible {
+    outline: 2px solid #00ff41;
+    outline-offset: 3px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .project-card,
+    .project-card::after,
+    .project-card img,
+    .project-corner {
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  .skill-section-grid {
+    background-image:
+      linear-gradient(rgba(0, 255, 65, 0.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 255, 65, 0.025) 1px, transparent 1px);
+    background-size: 48px 48px;
+    -webkit-mask-image: radial-gradient(circle at center, black, transparent 80%);
+    mask-image: radial-gradient(circle at center, black, transparent 80%);
+  }
+
+  .skill-group::before {
+    position: absolute;
+    top: 0;
+    left: 24px;
+    width: 52px;
+    height: 1px;
+    background: #00ff41;
+    box-shadow: 0 0 14px rgba(0, 255, 65, 0.75);
+    content: "";
+  }
+
+  .skill-group::after {
+    position: absolute;
+    right: -55px;
+    bottom: -55px;
+    width: 110px;
+    height: 110px;
+    border: 1px solid rgba(0, 255, 65, 0.08);
+    border-radius: 9999px;
+    content: "";
+    pointer-events: none;
+  }
+
+  .skill-badge::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 12px;
+    height: 12px;
+    border-top: 1px solid rgba(0, 255, 65, 0.35);
+    border-right: 1px solid rgba(0, 255, 65, 0.35);
+    content: "";
+    transition: width 300ms ease, height 300ms ease;
+  }
+
+  .skill-badge:hover::before {
+    width: 22px;
+    height: 22px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .skill-badge,
+    .skill-badge::before,
+    .skill-badge > span {
+      transition-duration: 0.01ms !important;
+    }
+  }
