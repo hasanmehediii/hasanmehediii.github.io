@@ -68,7 +68,7 @@ export const MY_PROJECTS: Project[] = [
     ],
     href: "https://www.github.com/hasanmehediii/LabGuard",
     liveLink: "#",
-    logo: "",
+    logo: "/assets/projects/labguard-logo.png",
     image: "/assets/projects/labguard.jfif",
     tags: [
       { id: 1, name: "Go" },
