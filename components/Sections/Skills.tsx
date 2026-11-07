@@ -18,7 +18,6 @@ interface CategoryConfig {
   label: string;
   caption: string;
   icon: LucideIcon;
-  code: string;
 }
 
 const CATEGORIES: CategoryConfig[] = [
@@ -27,42 +26,36 @@ const CATEGORIES: CategoryConfig[] = [
     label: 'Languages',
     caption: 'Core programming',
     icon: Braces,
-    code: 'LANG',
   },
   {
     id: 'frontend',
     label: 'Frontend',
     caption: 'Web interfaces',
     icon: LayoutTemplate,
-    code: 'WEB',
   },
   {
     id: 'mobile',
     label: 'Mobile',
     caption: 'Cross-platform apps',
     icon: Smartphone,
-    code: 'APP',
   },
   {
     id: 'backend',
     label: 'Backend',
     caption: 'APIs and services',
     icon: ServerCog,
-    code: 'API',
   },
   {
     id: 'database',
-    label: 'Data',
+    label: 'Databases',
     caption: 'Storage and caching',
     icon: Database,
-    code: 'DB',
   },
   {
     id: 'tool',
     label: 'Tools',
     caption: 'Workflow and delivery',
     icon: Wrench,
-    code: 'OPS',
   },
 ];
 
@@ -77,8 +70,8 @@ const getMonogram = (name: string) => {
 };
 
 const SkillBadge: React.FC<{ skill: SkillItem }> = ({ skill }) => (
-  <li className="skill-badge group/skill relative flex min-h-[68px] items-center gap-3 overflow-hidden rounded-xl border border-white/[0.07] bg-black/20 p-3 transition-all duration-300 hover:-translate-y-1 hover:border-cyber-primary/40 hover:bg-cyber-primary/[0.055] hover:shadow-[0_12px_30px_rgba(0,255,65,0.08)]">
-    <div className="relative flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-lg border border-white/10 bg-white/[0.92] p-2 shadow-[0_6px_18px_rgba(0,0,0,0.25)]">
+  <li className="skill-badge group/skill inline-flex min-h-11 max-w-full items-center gap-2.5 rounded-lg border border-white/[0.08] bg-white/[0.025] px-3 py-2 transition-colors duration-200 hover:border-cyber-primary/35 hover:bg-cyber-primary/[0.05]">
+    <div className="flex h-6 w-6 shrink-0 items-center justify-center overflow-hidden rounded bg-[#e8eeea] p-1">
       {skill.icon ? (
         <img
           src={skill.icon}
@@ -92,26 +85,16 @@ const SkillBadge: React.FC<{ skill: SkillItem }> = ({ skill }) => (
         />
       ) : null}
       <span
-        className={`${skill.icon ? 'hidden' : ''} font-tech text-sm font-bold text-[#07110c]`}
+        className={`${skill.icon ? 'hidden' : ''} font-tech text-[11px] font-bold text-[#07110c]`}
         aria-hidden="true"
       >
         {getMonogram(skill.name)}
       </span>
     </div>
 
-    <div className="min-w-0">
-      <p className="truncate font-mono text-sm font-bold text-slate-200 transition-colors duration-300 group-hover/skill:text-white">
-        {skill.name}
-      </p>
-      <p className="mt-0.5 font-mono text-[9px] uppercase tracking-[0.18em] text-slate-600 transition-colors duration-300 group-hover/skill:text-cyber-primary/70">
-        Ready
-      </p>
-    </div>
-
-    <span
-      className="absolute bottom-0 left-0 h-px w-0 bg-cyber-primary transition-all duration-500 group-hover/skill:w-full"
-      aria-hidden="true"
-    />
+    <span className="min-w-0 break-words font-mono text-xs leading-5 text-slate-300 transition-colors duration-200 group-hover/skill:text-white">
+      {skill.name}
+    </span>
   </li>
 );
 
@@ -123,43 +106,23 @@ const SkillGroup: React.FC<{ category: CategoryConfig; index: number }> = ({
   const CategoryIcon = category.icon;
 
   return (
-    <article
-      className={`skill-group relative overflow-hidden rounded-2xl border border-white/10 bg-[#08110d]/90 p-5 shadow-[0_20px_60px_rgba(0,0,0,0.22)] sm:p-6 ${
-        category.id === 'language' || category.id === 'backend'
-          ? 'lg:col-span-2'
-          : ''
-      }`}
-    >
-      <div className="mb-5 flex items-center justify-between gap-4 border-b border-white/[0.07] pb-4">
-        <div className="flex items-center gap-3">
-          <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-cyber-primary/25 bg-cyber-primary/[0.07] text-cyber-primary">
-            <CategoryIcon size={20} strokeWidth={1.7} aria-hidden="true" />
-          </div>
-          <div>
-            <h3 className="font-tech text-lg font-bold uppercase tracking-wider text-white">
-              {category.label}
-            </h3>
-            <p className="font-mono text-[10px] text-slate-500">{category.caption}</p>
-          </div>
+    <article className="grid min-w-0 gap-5 px-5 py-6 sm:px-7 lg:grid-cols-[240px_minmax(0,1fr)] lg:items-center lg:gap-8 lg:py-7">
+      <div className="flex items-center gap-3.5">
+        <span className="hidden font-mono text-[10px] text-slate-600 sm:block" aria-hidden="true">
+          {String(index + 1).padStart(2, '0')}
+        </span>
+        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-cyber-primary/15 bg-cyber-primary/[0.045] text-cyber-primary/80">
+          <CategoryIcon size={19} strokeWidth={1.6} aria-hidden="true" />
         </div>
-
-        <div className="text-right font-mono">
-          <p className="text-[10px] tracking-[0.2em] text-cyber-primary/60">
-            {category.code}_{String(index + 1).padStart(2, '0')}
-          </p>
-          <p className="mt-1 text-xs text-slate-500">
-            {String(categorySkills.length).padStart(2, '0')} modules
-          </p>
+        <div className="min-w-0">
+          <h3 id={`skill-category-${category.id}`} className="font-tech text-lg font-bold tracking-wide text-slate-100">
+            {category.label}
+          </h3>
+          <p className="mt-0.5 font-mono text-[11px] leading-5 text-slate-400">{category.caption}</p>
         </div>
       </div>
 
-      <ul
-        className={`grid grid-cols-1 gap-3 ${
-          category.id === 'language' || category.id === 'backend'
-            ? 'sm:grid-cols-2 lg:grid-cols-3'
-            : 'sm:grid-cols-2'
-        }`}
-      >
+      <ul className="flex min-w-0 flex-wrap gap-2" aria-labelledby={`skill-category-${category.id}`}>
         {categorySkills.map((skill) => (
           <SkillBadge key={skill.name} skill={skill} />
         ))}
@@ -170,18 +133,17 @@ const SkillGroup: React.FC<{ category: CategoryConfig; index: number }> = ({
 
 const Skills: React.FC = () => {
   return (
-    <section id="skills" className="relative overflow-hidden bg-[#070c09] py-24">
-      <div className="skill-section-grid pointer-events-none absolute inset-0 opacity-40" />
-      <div className="pointer-events-none absolute -right-24 top-1/4 h-80 w-80 rounded-full bg-cyber-primary/[0.06] blur-[120px]" />
+    <section id="skills" aria-labelledby="skills-heading" className="relative scroll-mt-20 overflow-hidden bg-[#070c09] py-20 md:py-24">
+      <div className="skill-section-grid pointer-events-none absolute inset-0 opacity-30" aria-hidden="true" />
 
       <div className="container relative mx-auto px-6">
-        <div className="mb-14 flex flex-col gap-7 md:flex-row md:items-end md:justify-between">
-          <div>
+        <div className="mb-10 flex flex-col gap-6 md:mb-12 lg:flex-row lg:items-end lg:justify-between">
+          <div className="min-w-0">
             <span className="mb-3 block font-mono text-sm uppercase tracking-[0.3em] text-cyber-primary">
               03. Capabilities
             </span>
-            <h2 className="font-tech text-4xl font-bold tracking-wider text-white md:text-5xl">
-              TECH_<span className="text-cyber-primary">ARSENAL</span>
+            <h2 id="skills-heading" className="font-tech text-3xl font-bold tracking-wide text-white sm:text-4xl md:text-5xl">
+              TECH_<wbr /><span className="text-cyber-primary">ARSENAL</span>
             </h2>
             <p className="mt-4 max-w-xl font-mono text-sm leading-6 text-slate-400">
               Technologies I use to design, build, ship, and maintain complete
@@ -189,19 +151,14 @@ const Skills: React.FC = () => {
             </p>
           </div>
 
-          <div className="flex w-fit items-center gap-3 rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 font-mono backdrop-blur-sm">
-            <span className="text-2xl font-bold text-cyber-primary">
-              {String(SKILLS.length).padStart(2, '0')}
-            </span>
-            <span className="text-[10px] uppercase leading-4 tracking-[0.2em] text-slate-500">
-              Technologies
-              <br />
-              online
-            </span>
+          <div className="flex shrink-0 flex-wrap items-center gap-x-5 gap-y-2 font-mono text-xs text-slate-400">
+            <span><span className="mr-2 text-slate-100">{String(SKILLS.length).padStart(2, '0')}</span>technologies</span>
+            <span className="h-3 w-px bg-white/15" aria-hidden="true" />
+            <span><span className="mr-2 text-slate-100">{String(CATEGORIES.length).padStart(2, '0')}</span>categories</span>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 gap-6 lg:grid-cols-2 xl:grid-cols-4">
+        <div className="relative divide-y divide-white/[0.07] overflow-hidden rounded-2xl border border-white/10 bg-[#0a110d]/95 shadow-[0_20px_60px_rgba(0,0,0,0.15)]">
           {CATEGORIES.map((category, index) => (
             <SkillGroup key={category.id} category={category} index={index} />
           ))}
