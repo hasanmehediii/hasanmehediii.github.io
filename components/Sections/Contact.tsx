@@ -5,7 +5,7 @@ const Contact: React.FC = () => {
   return (
     <section id="contact" className="py-24 bg-cyber-dark/50 text-center">
       <div className="container mx-auto px-6 max-w-4xl">
-        <span className="text-cyber-primary font-mono text-lg block mb-4">05. What's Next?</span>
+        <span className="text-cyber-primary font-mono text-lg block mb-4">06. What's Next?</span>
         <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">Get In Touch</h2>
         <p className="text-gray-400 text-lg mb-10 max-w-xl mx-auto">
           I'm currently looking for new opportunities, my inbox is always open. 

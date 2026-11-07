@@ -5,6 +5,7 @@ import About from './components/Sections/About';
 import Education from './components/Sections/Education';
 import Skills from './components/Sections/Skills';
 import Projects from './components/Sections/Projects';
+import Achievements from './components/Sections/Achievements';
 import Contact from './components/Sections/Contact';
 import Footer from './components/Layout/Footer';
 import Reveal from './components/UI/Reveal';
@@ -34,6 +35,10 @@ const App: React.FC = () => {
         
         <Reveal>
           <Projects />
+        </Reveal>
+
+        <Reveal>
+          <Achievements />
         </Reveal>
         
         <Reveal>

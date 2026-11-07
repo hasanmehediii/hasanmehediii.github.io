@@ -31,8 +31,8 @@ const Navbar: React.FC = () => {
             </span>
           </div>
           
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-8">
+          <div className="hidden lg:block">
+            <div className="ml-6 flex items-baseline space-x-2 xl:space-x-8">
               {NAV_LINKS.map((link) => (
                 <a
                   key={link.name}
@@ -46,9 +46,12 @@ const Navbar: React.FC = () => {
             </div>
           </div>
           
-          <div className="-mr-2 flex md:hidden">
+          <div className="-mr-2 flex lg:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
+              aria-label={isOpen ? 'Close navigation' : 'Open navigation'}
+              aria-expanded={isOpen}
+              aria-controls="mobile-navigation"
               className="inline-flex items-center justify-center p-2 rounded-md text-cyber-primary hover:text-white hover:bg-cyber-primary/20 focus:outline-none"
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -59,7 +62,7 @@ const Navbar: React.FC = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-cyber-black/95 backdrop-blur-xl border-b border-cyber-primary/20">
+        <div id="mobile-navigation" className="lg:hidden bg-cyber-black/95 backdrop-blur-xl border-b border-cyber-primary/20">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {NAV_LINKS.map((link) => (
               <a

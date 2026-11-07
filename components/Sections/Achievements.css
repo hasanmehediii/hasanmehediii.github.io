@@ -1,0 +1,183 @@
+.achievements-section {
+  scroll-margin-top: 64px;
+  padding: 80px 0;
+  background: #080d0a;
+}
+
+.achievements-header {
+  margin-bottom: 32px;
+}
+
+.achievements-eyebrow {
+  display: block;
+  margin-bottom: 12px;
+  color: #00ff41;
+  font: 0.875rem / 1.25rem "JetBrains Mono", monospace;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+
+.achievements-title {
+  margin: 0;
+  color: #f1f5f9;
+  font: 700 2.25rem / 2.5rem "Share Tech Mono", monospace;
+  letter-spacing: 0.05em;
+  overflow-wrap: anywhere;
+}
+
+.achievements-title span {
+  color: #00ff41;
+}
+
+.achievements-intro {
+  margin: 16px 0 0;
+  color: #94a3b8;
+  font: 0.875rem / 1.5rem "JetBrains Mono", monospace;
+}
+
+.achievements-grid {
+  display: grid;
+  width: 100%;
+  max-width: 800px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.achievement-card {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid #25332a;
+  border-radius: 14px;
+  background: #0d1510;
+  transition: border-color 180ms ease;
+}
+
+.achievement-card:hover,
+.achievement-card:focus-within {
+  border-color: #008f38;
+}
+
+.achievement-preview {
+  display: block;
+  overflow: hidden;
+  border-bottom: 1px solid #25332a;
+  background: #080b0a;
+}
+
+.achievement-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2000 / 1414;
+  object-fit: contain;
+}
+
+.achievement-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.achievement-category {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+  color: #75d98e;
+  font: 0.75rem / 1rem "JetBrains Mono", monospace;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.achievement-title {
+  margin: 0;
+  color: #f1f5f9;
+  font: 700 1.5rem / 2rem "Share Tech Mono", monospace;
+  letter-spacing: 0.025em;
+  text-wrap: balance;
+}
+
+.achievement-organizer {
+  margin: 7px 0 22px;
+  color: #94a3b8;
+  font: 0.75rem / 1.25rem "JetBrains Mono", monospace;
+}
+
+.achievement-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid #25332a;
+}
+
+.achievement-rank {
+  margin: 0 0 4px;
+  color: #00ff41;
+  font: 700 1.5rem / 2rem "Share Tech Mono", monospace;
+}
+
+.achievement-field {
+  max-width: 175px;
+  margin: 0;
+  color: #94a3b8;
+  font: 0.75rem / 1.25rem "JetBrains Mono", monospace;
+}
+
+.achievement-link {
+  display: inline-flex;
+  min-height: 44px;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 6px;
+  color: #d8e5dc;
+  font: 700 0.75rem / 1rem "JetBrains Mono", monospace;
+  text-decoration: none;
+  transition: color 180ms ease;
+}
+
+.achievement-link:hover {
+  color: #00ff41;
+}
+
+.achievement-link:focus-visible,
+.achievement-preview:focus-visible {
+  outline: 2px solid #00ff41;
+  outline-offset: -4px;
+  border-radius: 4px;
+}
+
+@media (min-width: 768px) {
+  .achievements-title {
+    font-size: 3rem;
+    line-height: 1;
+  }
+}
+
+@media (max-width: 639px) {
+  .achievements-section {
+    padding: 56px 0;
+  }
+
+  .achievements-grid {
+    max-width: 400px;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+  }
+
+  .achievement-body {
+    padding: 18px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .achievement-card,
+  .achievement-link {
+    transition: none;
+  }
+}
